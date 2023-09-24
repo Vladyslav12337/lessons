@@ -1,0 +1,122 @@
+@import  url("fonts.css");
+@import  url("reset.css");
+
+body{
+	font-family: "inter";
+	font-size: 16px;
+	color: #000;
+}
+
+
+.list h1{
+	text-align: center;
+	text-decoration: underline;
+	text-shadow: 5px 4px 3px red;
+	font-size: 50px;
+	line-height: 1.5;
+	color: #000;
+}
+
+
+.list li {
+	text-align-last: left;
+	text-decoration: underline;
+	color: blue;
+	font-size: 18px;
+}
+
+.list h2{
+	text-align: left;
+	font-size: 24px;
+	color: red;
+	font-style: italic;
+}
+
+.text-period h3 {
+	text-transform: uppercase;
+	text-decoration: overline;
+	font-weight: 1.5;
+	text-align: center;
+}
+
+.text-period p {
+	font-family:"oswald";
+	text-indent: 30px;
+	letter-spacing: 3px;
+}
+
+.history-rom p {
+	white-space: nowrap;
+	word-spacing: 4px;
+	color: blueviolet;
+
+}
+
+
+.principiat h3{
+font-weight: 800;
+text-indent: 50px;
+text-decoration: line-through;
+}
+
+.principiat p {
+	text-align: right;
+	line-height: 0,5;
+	font-style: oblique;
+}
+
+.dynasty-julii p {
+	text-shadow: 1px 3px 5px #250a50, 1px -3px 2px #000;
+	font-style: italic;
+}
+
+.flav-dynasty p {
+	font-family: "caustend";
+	font-style: italic;
+}
+
+.maket-first h4{
+	font-family: "poppins";
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 1.27;
+	color: rgba(55, 57, 63, 1);
+}
+
+
+.maket-first p{
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.46;
+	color: rgba(125, 125, 125, 1);
+}
+
+.maket-first h3{
+font-family: "poppins";
+font-weight: 600;
+font-size: 20px;
+color: rgba(107, 119, 229, 1);
+line-height: 1.27;
+}
+
+.maket-second h3 {
+	font-family: "poppins";
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 1.27;
+	color: rgba(55, 57, 63, 1);
+}
+
+.maket-second {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.27;
+	color: rgba(125, 125, 125, 1);
+}
+
+.maket-first h2 {
+	text-align: center;
+	color: #000;
+	font-size: 25px;
+	text-decoration: underline;
+}

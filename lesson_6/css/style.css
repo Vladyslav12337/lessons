@@ -83,7 +83,7 @@ margin: 0 0 12px 0;
 .right-content ul {
 	font-family: "inter";
 	color: rgba(125, 125, 125, 1);
-	line-height: auto;
+	line-height: 1.27;
 	font-size: 18px;
 	padding: 0 0 0 35px;
 }

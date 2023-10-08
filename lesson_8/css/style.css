@@ -1,0 +1,490 @@
+@import  url("fonts.css");
+@import  url("reset.css");
+
+
+
+.white-color-maket {
+	font-family: "Inter";
+	margin: 100px 0;
+}
+.white-color-container {
+	max-width: 673px;
+	margin: 0 auto;
+}
+.wite-color-subtitle {
+	color: #37393F;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.2;
+	background: url("../img/Rectangle\ 8.png")no-repeat left;
+	margin-bottom: 16px;	
+	padding-left: 15px;
+}
+.white-color-title {
+	color: #37393F;
+	font-family: "Poppins";
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 1.21;
+	margin-bottom: 20px;
+	max-width: 413px;
+}
+.white-color-text {
+	color: #7D7D7D;
+	font-size: 18px;
+	line-height: 1.46;
+	margin-bottom: 20px;
+}
+
+.white-color-text p {
+	margin-bottom: 15px;
+}
+
+.white-color-text p:last-child {
+	margin-bottom: 0px;
+}
+
+
+.white-color-list {
+	color: #37393F;
+font-family: "Poppins";
+font-size: 20px;
+line-height: normal;
+margin-bottom: 43px;
+}
+
+
+.white-color-list li {
+	margin-bottom: 23px;
+	min-height: 30px;
+}
+
+.white-color-list li:last-child {
+margin-bottom: 0px;
+}
+
+.white-color-list li {
+	background: url("../img/vector.jpg")0 3px no-repeat;
+	padding-left: 35px;
+}
+
+.white-color-icons {
+	display: inline-block;
+	margin-bottom: 37px;
+}
+
+.white-block-exp {
+max-width: 296px;
+max-height: 140px;
+display: inline-block;
+margin-right: 21px;
+border: 1px solid #E3E3E3;
+padding: 31px 32px 32px 32px;
+}
+
+.white-block-content{
+max-width: 232px;
+max-height: 77px;
+background: url("../img/list.jpg")0 0 no-repeat;
+padding-left: 58px;
+}
+
+.exp,
+.awards {
+	color: #37393F;
+	font-family: "Poppins";
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+.white-block-awards{
+	max-width: 297px;
+	max-height: 140px;
+	padding: 31px 37px 32px 37px;
+	border: 1px solid #E3E3E3;
+	display: inline-block;
+}
+
+.white-awards-content{
+	max-width: 297px;
+	max-height: 140px;
+	background: url("../img/kubok.jpg")0 0 no-repeat;
+	padding-left: 57px;
+}
+
+.white-color-icons p {
+	color: #7D7D7D;
+	font-size: 16px;
+	line-height: 1.35;
+
+}
+.more-about {
+	
+	padding: 21px 27px 22px 27px;
+	justify-content: center;
+	align-items: center;
+	background: #6B77E5;
+	max-width: 184px;
+}
+
+.link-more{
+	color: #FFF;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.2;
+	text-transform: capitalize;
+}
+
+/*==============================*/
+
+.we-made-maket {
+	font-size: 0px;
+	font-family: "Causten";
+}
+.we-made-container {
+	max-width: 1240px;
+	margin: 0 auto;
+	
+	
+}
+
+.we-made-right-block {
+	max-width: 614px;
+	max-height: 640px;
+	background: url("../img/backimg.jpg")0 0 no-repeat;
+	padding: 183px 74px 175px 74px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.we-made-right-content {
+	max-width: 466px;
+	max-height: 282px;
+
+}
+
+.we-made-title {
+	color: #FFF;
+font-family: "Core Sans C";
+font-size: 34px;
+font-style: normal;
+font-weight: 800;
+line-height: 1.47;
+letter-spacing: 0.208px;
+margin-bottom: 30px;
+}
+
+.we-made-text {
+	color: #FFF;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+	letter-spacing: 1px;
+	margin-bottom: 50px;
+}
+
+.button {
+	border-radius: 8px;
+	background: #FFF;
+	padding: 12px 44px;
+	justify-content: center;
+	align-items: center;
+	max-width: 168px;
+
+}
+.shop-now {
+	color: #3C4242;
+	text-align: center;
+	font-family: "Causten";
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.2;
+}
+.we-made-left-block {
+	background: url("../img/people.jpg")0 0 no-repeat;
+	width: 626px;
+	height: 640px;
+	display: inline-block;
+	
+}
+
+/*=========================================*/
+
+.latest-project-maket {
+	max-width: 1220px;
+	margin: 0 auto;
+	margin-top: 100px;
+	font-family: "Inter";
+}
+.latest-project-content-top {
+	max-width: 852px;
+	padding: 0 15px;
+	margin: 0 auto;
+	text-align: center;
+	
+}
+.project-title {
+	text-transform: capitalize;
+	display: inline-block;
+	line-height: 1.22;
+	padding-left: 18px;
+	color: #37393F;
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 14px;
+	background: url("../img/Rectangle\ 8.png")0px 3px no-repeat;
+}
+
+.prolect-subtitle {
+	color: #37393F;
+	text-align: center;
+	font-family: "Poppins";
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 1.21;
+	margin-bottom: 14px;
+}
+.project-text-top {
+	color: #7D7D7D;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.46;
+	margin-bottom: 47px;
+}
+.container-middle-content-first,
+.container-middle-content-second {
+	max-width: 1220px;
+	margin: 0 auto;
+	font-size: 0;
+	margin-bottom: 58px;
+}
+
+.back-computer {
+	background: url("../img/computer.jpg")0 0 no-repeat;
+}
+
+.september {
+	color: #7D7D7D;
+font-size: 14px;
+font-weight: 400;
+line-height: 1.46;
+background: url("../img/Group.jpg")left no-repeat;
+padding-left: 25px;
+}
+
+
+
+.back-man {
+	background: url("../img/man.jpg")0 0 no-repeat;
+}
+
+.subtitle-project-container {
+	color: #37393F;
+	font-family: "Poppins";
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.27;
+	margin-bottom: 10px;
+}
+
+
+.back-phone {
+	background: url("../img/phone.jpg")0 0 no-repeat;	
+}
+
+.container-dama,
+.container-table,
+.container-man,
+.container-computer {
+	margin-right: 34px;
+	display: inline-block;
+	width: 100%;
+	max-width: 384px;
+}
+
+.container-phone {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	max-width: 384px;
+}
+
+.container-notebok {
+	display: inline-block;
+	width: 100%;
+	max-width: 384px;
+}
+
+
+
+.back-dama{
+background: url("../img/madam.jpg")0 0 no-repeat;
+}
+
+.back-table {
+background: url("../img/table.jpg")0 0 no-repeat;
+}
+
+.back-notebok{
+	background: url("../img/notebok.jpg")0 0 no-repeat;
+}
+
+
+.back-computer,
+.back-man,
+.back-phone,
+.back-dama,
+.back-table,
+.back-notebok {
+	margin-bottom: 24px;
+	max-width: 384px;
+	height: 501px;
+}
+
+
+/*================================*/
+
+
+.india-maket {
+	max-width: 1220px;
+	margin: 0 auto;
+	font-family: "Core Sans C";
+	margin-top: 100px;
+}
+
+.india-title {
+	color: #3C4242;
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 1.2;
+	letter-spacing: 0.56px;
+	margin-bottom:30px;
+	background: url("../img/Rectangle\ 21.png")left no-repeat;
+	margin-left: -15px;
+	padding-left: 15px;
+}
+
+.india-subtitle {
+	color: #807D7E;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.67;
+	letter-spacing: 0.4px;
+	margin-bottom: 25px;
+}
+
+.india-text {
+	color: #807D7E;
+font-family: "Causten";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 1.67;
+letter-spacing: 0.4px;
+margin-bottom: 20px;
+}
+
+.india-text p {
+	margin-bottom: 20px;
+}
+
+.india-text p:nth-child(2){
+	margin-bottom: 25px;
+}
+
+.button-link {
+	max-width: 168px;
+}
+
+.link-india {
+	color: #807D7E;
+font-size: 20px;
+font-weight: 600;
+line-height: 1.6;
+letter-spacing: 0.4px;
+}
+
+.india-text span {
+	color: #807D7E;
+	font-family: "Causten";
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.67;
+	letter-spacing: 0.4px;
+}
+
+
+
+
+.training-skills {
+	margin: 0 auto;
+	max-width: 1000px;
+	margin-top: 199px;
+}
+.block-color {
+	background-color: #6B77E5;
+	margin-bottom: 50px;
+	height: 150px;
+}
+
+.block-img {
+	background-image: url("../img/iron.jpg");
+	margin-bottom: 50px;
+	height: 300px;
+}
+.block-liner-grad {
+	background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,9,1) 48%, rgba(0,212,255,1) 100%);
+	margin-bottom: 50px;
+}
+.repet {
+	background: url("../img/OIP.jpg")repeat;
+	margin-bottom: 50px;
+	height: 400px;
+}
+.repet-x {
+	background: url("../img/list.jpg")repeat-y;
+	margin-bottom: 50px;
+	height: 250px;
+}
+.position {
+	background: url("../img/kubok.jpg")top right;
+	margin-bottom: 50px;
+	min-height: 300px;
+}
+.attachment-first {
+background: url("../img/iron.jpg")center no-repeat;
+background-attachment: fixed;
+font-size: 20px;
+height: 800px;
+margin-bottom: 50px;
+}
+.bg-cover {
+	background: url("../img/OIP.jpg");
+	background-size: cover;
+	height: 150px;
+	margin-bottom: 50px;
+}
+.bg-size {
+	background: url("../img/bridge.jpg");
+	background-size: 500px 300px;
+	margin-bottom: 100px;
+	
+}
+.multi {
+	margin-bottom: 100px;
+	height: 500px;
+background: url("../img/iron.jpg") no-repeat 0 0 / 200px, linear-gradient(55.95deg, rgba(255, 64, 58, 0.3) 0%, rgba(247, 94, 5, 0.3) 100%), url("../img/kubok.jpg")no-repeat 0 0 / 600px;
+}
+
+.radial-grad{
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,68,1) 48%, rgba(0,212,255,1) 100%);
+	height: 400px;
+}
+
+
+
+

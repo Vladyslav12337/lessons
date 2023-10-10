@@ -1,0 +1,144 @@
+@import  url("fonts.css");
+@import  url("reset.css");
+
+
+
+
+.whitecollor-maket {
+	padding: 100px 0;
+	font-family: "Inter";
+	margin: 0 auto;
+	max-width: 675px;
+}
+.content-top {
+	font-size: 0;
+	margin-bottom: 10px;
+}
+.whitecollor-subtitle {
+	color: #37393F;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.2;
+	margin-bottom: 16px;
+	max-width: 200px;
+}
+.whitecollor-subtitle::before{
+background: #40DDB6;
+width: 12px;
+height: 12px;
+content: "";
+margin-right: 6px;
+}
+
+.whitecollor-subtitle:hover::before {
+	background: red;
+	
+}
+
+
+.whitecollor-title {
+	color: #37393F;
+	font-family: "Poppins";
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 1.21;
+	max-width: 415px;	
+}
+
+.whitecollor-maket p {
+	color: #7D7D7D;
+	font-family: "Inter";
+	font-size: 18px;
+	line-height: 1.46;
+}
+
+
+
+.whitecollor-text p:first-child {
+	margin-bottom: 16px;
+}
+
+.whitecollor-text{
+margin-bottom: 48px;
+
+}
+.ourvission-content,
+.mission-content {
+	max-width: 675px;
+	border: 1px solid #E3E3E3;
+	padding: 28px 41px 28px 38px;
+	margin-bottom: 31px;
+}
+
+.ourvission-title,
+.mission-title {
+	color: #37393F;
+	font-family: "Poppins";
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.2;
+	margin-bottom: 12px;
+}
+
+.ourvission-title::before,
+.mission-title::before {
+	background: url("../img/vector.jpg")0 0 no-repeat;
+	content: "";
+	display: inline-block;
+	width: 27px;
+	height: 27px;
+	margin-right: 19px;
+	margin-bottom: -7px;
+}
+
+.ourvision-block,
+.mission-block {
+	max-width: 596px;
+}
+
+.mission-block p,
+.ourvision-block p {
+	padding-left: 45px;
+}
+
+
+
+
+/*Не уверен что правильно отцентровал содержимое блока, делал больше на глазок*/
+
+
+.mission-content {
+	margin-bottom: 48px;
+}
+
+.button {
+	width: 200px;
+	height: 65px;
+}
+.link-about {
+	color: #FFF;
+	text-align: center;
+	font-family: "Inter";
+	font-size: 18px;
+	font-weight: 600;
+	line-height: normal;
+	text-transform: capitalize;
+	background: #6B77E5;
+	padding: 21px 35px 21px 35px;
+	
+}
+
+.link-about:hover {
+	background: #2536d3;
+}
+
+.link-about:focus {
+	background: #09136e;
+}
+
+
+
+
+
+
+

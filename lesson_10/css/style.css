@@ -1,0 +1,133 @@
+@import  url("fonts.css");
+@import  url("reset.css");
+
+
+
+
+
+
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	
+}
+
+.wrapper {
+	background: #000;
+}
+
+
+.top-content h1,
+.bot-content h5 {
+	color: #d66422;
+	font-family: "inter";
+	font-size: 65px;
+	font-weight: 700;
+	line-height: 1.1;
+	text-align: center;
+	background: url("../img/back.jpg");
+}
+
+
+
+.icon-svg,
+.content-svg,
+.logo,
+.rastr {
+	background: gray;
+	border-radius: 25px;
+	padding-bottom: 20px;
+	box-shadow: 15px 15px 25px -15px #676b97;
+	padding-left: 220px;
+	padding-top: 20px;
+	margin-bottom: 25px;
+}
+
+.title-icon {
+	color: #40DDB6;
+	font-family: "Poppins";
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 1.1;
+	text-align: center;
+	margin-bottom: 25px;
+	background: #37393F;
+	border-radius: 25px;
+	
+}
+
+.title-icon:hover {
+color: #a71244;
+}
+
+.icon-svg img {
+	margin-right: 20px;
+}
+
+.icon-svg img:hover{
+box-shadow: 0px 0px 3px 13px rgba(14, 242, 212, 0.6);
+}
+
+.content-svg img {
+	margin-right: 25px;
+}
+
+.content-svg img:hover {
+background: #dd6e13;
+}
+
+.content-svg {
+	padding-left: 110px;
+	background: #b013be;
+}
+
+.logo img {
+	margin-right: 25px;
+}
+
+.logo img:hover {
+	background: #b5bec5;
+}
+
+.logo {
+	padding-left: 100px;
+	background: #a71244;
+}
+
+.rastr {
+	background: #361397;
+	padding-left: 115px;
+}
+
+.rastr img {
+	max-width: 250px;
+	margin-right: 10px;
+	border-radius: 10px;
+}
+
+.bot-content h5 {
+	font-size: 35px;
+}
+
+.rastr {
+	margin-bottom: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

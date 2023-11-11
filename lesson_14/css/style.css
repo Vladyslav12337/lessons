@@ -1,0 +1,298 @@
+@import  url("fonts.css");
+@import  url("reset.css");
+
+
+.wrapper {
+height: 1000px;
+}
+.container {
+	position: relative;
+}
+
+
+.container__star-ship {
+	max-width: 250px;
+	max-height: 250px;
+}
+
+.container__star-ship {
+position: absolute;
+top: 500px;
+left: 500px;
+}
+
+.ship-img {
+	max-width: 250px;
+	max-height: 250px;
+	max-width: 100%;
+}
+
+.ship-tanos {
+	max-width: 600px;
+	max-height: 250px;
+	max-width: 100%;
+}
+
+.container__ship-second {
+	position: absolute;
+	top: 10px;
+	left:10px;
+
+}
+
+
+
+.interactive__laser {
+	height: 270px;
+	width: 3px;
+	background: #f10505;
+	position: absolute;
+	z-index: 2;
+	top: 270px;
+	left: 635px;
+	visibility: hidden;
+	box-shadow: 1px -1px 18px 16px rgba(225,  24,  24, 0.8);
+}
+
+.interactive__button {
+	display: inline-block;
+	height: 35px;
+	width: 75px;
+	background: #cf0909;
+	border-radius: 50%;
+	text-align: center;
+	padding: 8px;
+	box-shadow: 0px 5px 0px #8f0707;
+	position: absolute;
+	left: 600px;
+	top: 830px;
+	z-index: 3;
+}
+
+.interactive__button:active {
+	box-shadow: 0px 2px 0px #8f0707;
+	top: 832px;
+}
+
+.interactive:active .interactive__laser {
+	visibility: visible;
+}
+
+.start {
+	max-width: 250px;
+	max-height: 250px;
+	max-width: 100%;
+}
+
+
+
+.container__gamepad {
+	position: absolute;
+	left: 465px;
+}
+
+.footer {
+	background: #000;
+width: 1280px;
+height: 300px;
+
+}
+
+.damage-ship {
+	max-width: 100px;
+	height: 100px;
+	position: absolute;
+	left: -50px;
+	top: -100px;
+}
+
+
+.interactive:active.interactive__damage {
+	visibility: visible;
+}
+
+@keyframes run {
+	0%{
+		left: 0;
+	}
+	100% {
+		left: 45%;
+	}
+}
+
+.container__ship-second {
+	animation-name: run;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-duration: 3s;
+}
+
+.title {
+	font-size: 45px;
+	color: #000;
+	background: rgb(27, 159, 168);
+	transition: 0.3s;
+	text-align: center;
+	padding: 25px;
+}
+
+
+
+.title:hover {
+	color: #f10505;
+}
+
+
+.block__transition {
+	margin-bottom: 50px;
+}
+
+.block__transition-property,
+.block__transition-property-opacity,
+.block__transition-delay,
+.block__transition-timing {
+	width: 220px;
+	height: 200px;
+	background: #05cef1;
+	border: #000 4px solid;
+}
+
+.block__transition-property {
+	transition-duration: 0.5s, 2s;
+	transition-property:width, background-color;
+	padding: 80px 20px;
+	margin: 25px;
+}
+span {
+	font-size: 20px;
+	color: antiquewhite;
+	text-transform: uppercase;
+}
+
+
+.block__transition-property:hover {
+	width: 300px;
+	background: #000;
+}
+
+.block__transition-property-opacity {
+	transition-duration: all;
+	padding: 80px 20px;
+	margin: 25px;
+	transition-duration: 1.0s;
+}
+
+.block__transition-property-opacity:hover {
+	opacity: 0;
+	visibility: hidden;
+}
+
+
+.block__transition-delay {
+transition-duration:0.5s, 0.3s,1s;
+transition-delay: 0s, 0.5s, 0.8s;
+transition-property: width, height, background-color;
+margin: 25px;
+padding: 80px 20px;
+}
+
+.block__transition-delay:hover {
+width: 300px;
+height: 250px;
+background:#126c7c;
+}
+
+
+.block__transition-timing {
+padding: 80px 20px;
+transition-duration: 1s;
+transition-timing-function: linear;
+margin-left: 25px;
+}
+
+.block__transition-timing:hover {
+	width: 500px;
+	height: 300px;
+	
+}
+
+
+.block__animation {
+	height: 300px;
+	width: 300px;
+	background: url("../img/ninja-PhotoRoom.png-PhotoRoom.png")center / cover;
+	animation-iteration-count: infinite;
+	animation-duration: 1.5s;
+	animation-name:rotate;
+	
+}
+
+.block__animation:hover {
+	animation-play-state:paused;
+}
+
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.main{
+	background: #a1099a;
+}
+
+
+.star {
+	font-size: 45px;
+	text-align:center;
+	padding: 25px;
+}
+
+
+.game {
+	transition: color 0.5s;
+}
+.game:hover {
+	color: #126c7c;
+}
+
+.header {
+	margin-bottom: -25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,400 @@
+@import  url("fonts.css");
+@import  url("reset.css");
+
+
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	border-bottom: 1px solid #333;
+}
+.header--margin{
+	margin-bottom: 100px;
+}
+
+[class*="__container"] {
+	width: 1270px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.header__container {
+	display: flex;
+	align-items: center;
+	padding-top: 34px;
+	padding-bottom: 31px;
+	justify-content: space-between;
+}
+
+.header__left {
+	display: flex;
+	gap: 164px;
+	align-items: center;
+	padding-right: 1px;
+}
+
+.header__right {
+	display: flex;
+	gap: 60px;
+	align-items: center;
+}
+
+.header__search {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	background-color: #F6F6F6;
+	padding: 12px 48px;
+	border-radius: 8px;
+	color: #807D7E;
+	font-family: "Causten";
+	font-size: 18px;
+	font-weight: 600;
+
+}
+
+.header__search:hover{
+	background-color: #d4cccc;
+	transition: 0.2s;
+}
+
+.header__search::before{
+	content: "";
+	background: url("../img/search.svg") center / cover no-repeat;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+}
+
+.header__right {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+}
+
+.header__language {
+	color: #333;
+	font-family: "Causten";
+	font-size: 18px;
+	gap: 19px;
+	display: flex;
+	align-items: center;
+}
+
+.header__language::after {
+	background: url("../img/variant.svg") center/cover;
+	min-height: 5px;
+	min-width: 10px;
+	display: inline-block;
+	content: "";
+}
+
+.header__enter {
+	display: flex;
+	align-items: center;
+	gap: 29px;
+}
+
+.login {
+	border-radius: 8px;
+	background: #8A33FD;
+	padding: 12px 48px;
+	color: #FFF;
+	text-align: center;
+	font-family: "Causten";
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.login:hover {
+background: #470a96;
+transition: 0.3s;
+}
+
+.signup {
+	color: #8A33FD;	
+	font-family: "Causten";
+	font-size: 18px;
+	font-weight: 500;
+	padding: 12px 0 12px 48px;
+	border: 1px solid #3C4242;
+	border-radius: 8px;
+	min-width: 156px;
+	max-height: 46px;
+}
+
+.signup:hover {
+	background: #f3ecec;
+}
+
+/*=====================================================*/
+
+.page {
+	flex-grow: 1;
+}
+
+.block-category--margin {
+	margin-bottom: 100px;
+}
+
+.block-category__title {
+	display: flex;
+	gap: 20px;
+	color: #3C4242;
+	font-family: "Core Sans C";
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 1.2;
+	letter-spacing: 0.56px;
+	margin-bottom: 70px;
+}
+
+.block-category__title::before {
+	content: "";
+	width: 6px;
+	height: 30px;
+	border-radius: 10px;
+	background-color: #8A33FD;
+}
+
+
+.block-category__products {
+	margin: 0 -25px;
+
+}
+
+.products {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 50px;
+}
+
+.products__sell {
+	padding: 0 25px;
+	flex-basis: 25%;
+}
+
+.item-products {
+	display: flex;
+	flex-direction: column;
+	gap: 15.5px;
+}
+
+.item-products__image {
+width: 100%;
+}
+
+.item-products__all {
+	display: flex;
+	justify-content: space-between;
+	max-width: 270px;
+	align-items: center;
+}
+
+.item-products__name {
+	color: #2A2F2F;
+	font-family: Causten;
+	font-size: 17.875px;
+	font-weight: 700;
+	line-height: 1.56; 
+	letter-spacing: -0.715px;
+}
+.item-products__link {
+	color: #7F7F7F;
+	font-family: Causten;
+	font-size: 13.407px;
+	font-weight: 500;
+	line-height: 2.08; 
+	letter-spacing: -0.536px;
+}
+
+
+.block-orders__info {
+	display: flex;
+	font-display: column;
+	justify-content:space-between ;
+	border-radius: 8px;
+	background: #F6F6F6;
+	justify-content: space-between;
+	min-height: 135px;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.block-orders__item {
+	padding-top: 28px;
+	padding-left: 47px;
+}
+
+.item-block-orders__nom {
+margin-bottom: 14px;
+color: #3C4242;
+font-family: "Causten";
+font-size: 20px;
+font-weight: 600;
+}
+
+.item-block-orders__data {
+	margin-bottom: 7px;
+}
+
+.mod {
+color: #BEBCBD;
+font-family: "Causten";
+font-size: 14px;
+font-weight: 400;
+}
+
+.item-block-orders__data,
+.item-block-orders__delivery,
+.item-column-left__status,
+.item-column-left__pay {
+	color: #807D7E;
+	text-align: left;
+	font-family: "Causten";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 600;
+}
+
+.item-column-left__pay,
+.item-column-left__status {
+	text-align: right;
+}
+
+.block-orders__coluumn-left {
+display: flex;
+flex-direction: column;
+padding-top: 66px;
+padding-right: 47px;
+text-align: right;
+}
+
+.block-orders--margin {
+	margin-bottom: 30px;
+}
+
+
+.block-status {
+	display: flex;
+	justify-content: space-between;
+	max-width: 900px;
+	margin: 0 auto;
+	
+}
+
+.block-status__left {
+	display: flex;
+	gap: 25px;
+
+}
+
+.block-status__item-name {
+	margin-top: 3px;
+	color: #3C4242;
+	text-align: center;
+	font-family: "Causten";
+	font-size: 16px;
+	font-weight: 600;
+	
+}
+
+.block-status__item-color,
+.block-status__item-qty{
+	color: #BEBCBD;
+	font-family: "Causten";
+	font-size: 14px;
+	font-weight: 600;
+}
+
+
+.block-status__rigt-button {
+	padding: 14px 28px;
+	border-radius: 8px;
+	background: #8A33FD;
+	min-width: 144px;
+	min-height: 50px;
+	display: flex;
+	color: #FFF;
+	text-align: center;
+	font-family: "Causten";
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.block-status__rigt-button:hover {
+	background: #631ebe;
+	transition: all 0.3s ;
+}
+
+.block-status__img {
+	max-width: 100%;
+}
+
+.block-status__right {
+	padding: 23px 0px;
+}
+
+.block-status__mod {
+	color: #3C4242;
+	font-family: "Causten";
+	font-size: 14px;
+	font-weight: 600;
+
+}
+
+
+.block-status__item-price {
+color: #807D7E;
+font-family: "Causten";
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.block-status--margin {
+	margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

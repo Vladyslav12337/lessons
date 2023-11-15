@@ -232,7 +232,7 @@ transition: 0.3s;
 
 .block-orders__info {
 	display: flex;
-	font-display: column;
+	
 	justify-content:space-between ;
 	border-radius: 8px;
 	background: #F6F6F6;

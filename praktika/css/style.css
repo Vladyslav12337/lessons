@@ -1,0 +1,70 @@
+@import  url("fonts.css");
+@import  url("reset.css");
+
+
+
+.wrapper {
+	overflow: hidden;
+
+
+}
+.header {
+	max-width: 900px;
+	margin: 0 auto;
+	
+}
+.header__menu {
+	display: flex;
+	position: sticky;
+	align-items:center;
+	background: blueviolet;
+}
+.header__left-column {
+	margin-right: 195px;
+}
+.header__center-column {
+	display: flex;
+	margin-right: 40px;
+}
+
+.header__list{
+	max-width: 601px;
+	display: flex;
+	gap: 25px;
+	padding: 5px;
+	align-items:center;
+}
+
+.header__list-menu {
+	background: #b80b0b;
+	position: relative;
+	left: 40px;
+	visibility: hidden;
+}
+
+.header__list-item:hover .header__list-menu {
+	visibility: visible;
+}
+
+.header__list-link{
+	
+}
+
+.header__list-item {
+	
+}
+
+.header__sub-list {
+	
+}
+.header__right-column {
+}
+.header__link {
+}
+
+
+
+
+
+
+

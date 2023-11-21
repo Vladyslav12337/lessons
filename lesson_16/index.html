@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>lesson15</title>
+</head>
+<body>
+<div class="wrapper">
+		<main class="main">
+<div class="page">
+				<div class="page__container">
+					<h2 class="page__title">Contact Us</h2>		
+					<h3 class="page__sub-title">Request A Call Back !</h3>					
+				
+				<form class="page__form form" id="some-form" enctype="multipart/form-data" method="get" action="#"></form>
+				<div class="form__body">
+					<div class="form__item">
+						<input autocomplete="on" type="text" name="name" placeholder="Your name" >
+					</div>
+					<div class="form__item">
+						<input name="mail" placeholder="Email Address"  type="email">
+					</div>
+					<div class="form__item">
+						<input autocomplete="off" name="phone" placeholder="Phone Number" type="tel">
+					</div>
+					<div class="form__item">
+						<input name="mail" placeholder="Subject" type="email">
+					</div>
+					<div class="form__item form__item--textarea">
+						<textarea class="form__textarea" name="Message..." placeholder="Message..."></textarea>
+					</div>
+				</div>
+				<button class="form__button" form="some-form" type="submit">submit</button>
+			</div>
+</div>
+		<div class="euphoria-container euphoria-container--margin">
+				<h2 class="euphoria-container__title">My Info</h2>
+				<h3 class="euphoria-container__sub-title">Add Address</h3>
+				<form class="euphoria-container__form form-eu" id="some-form-eu" enctype="multipart/form-data" method="get" action="#"></form>
+				<div class="form-eu__body">
+						
+						<div class="form-eu__item">
+							<label for="firstname">First name*</label>
+							<input type="text" name="name" placeholder="First name" id="firstname">
+						</div>
+						
+						<div class="form-eu__item">
+							<label for="lastname">Last Name*</label>
+							<input type="text" name="lastname" placeholder="Last name" id="lastname">
+						</div>
+						
+						<div class="form-eu__item">
+							<label for="country">Country / Region*</label>
+							<input type="text" name="country" placeholder="Country / Region" id="country">
+						</div>
+						
+						<div class="form-eu__item">
+							<label for="company">Company Name</label>
+							<input type="text" name="company" placeholder="Company (optional)" id="company">
+						</div>
+						
+						<div class="form-eu__item">
+							<label for="adress">Street Address*</label>
+							<input type="text" name="adress" placeholder="House number and street name" id="adress">
+						</div>
+						
+						<div class="form-eu__item">
+							<label for="apt">Apt, suite, unit</label>
+							<input type="text" name="apt" placeholder="apartment, suite, unit, etc. (optional)" id="apt">
+						</div>
+						
+						<div class="form-eu__item">
+							<label for="city">City*</label>
+							<input type="text" name="city" placeholder="Town / City" id="city">
+						</div>
+						
+						<div class="form-eu__item">
+							<label for="state">State*</label>
+							<input type="text" name="state" placeholder="State" id="state">
+						</div>
+						
+						<div class="form-eu__item">
+							<label for="phone">Phone*</label>
+							<input type="number" name="phone" placeholder="Phone" id="phone">
+						</div>
+						
+						<div class="form-eu__item">
+							<label for="post">Postal Code*</label>
+							<input type="number" name="post" placeholder="Postal Code" id="post">
+						</div>
+						
+						<div class="form-eu__item form-eu__item--textarea">
+							<label for="deli">Delivery Instruction</label>
+							<textarea class="form-eu__textarea" name="text" id="deli" placeholder="Delivery Instruction" ></textarea>
+						</div>
+				</div>
+				<div class="form-eu__itemcheck">
+					<input class="form-eu__check" type="checkbox" name="shipping">Set as default shipping address
+				</div>
+				<div class="form-eu__itemcheck">
+					<input class="form-eu__check" type="checkbox" name="billing">Set as default billing address
+				</div>
+				<div class="form-eu__button-block">
+					<button  class="form-eu__button" form="some-form"  type="submit">Save</button>
+					<button  class="form-eu__button-reset" form="some-form"  type="reset">Cancel</button>
+				</div>
+		</div>
+		</main>
+</div>
+</body>

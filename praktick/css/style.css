@@ -1,0 +1,643 @@
+@import  url("fonts.css");
+@import  url("reset.css");
+
+
+.wrapper{
+max-width: 1240px;
+margin: 0 auto;
+}
+
+.header__container{
+
+	padding: 31px 5px;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #BEBCBD;
+}
+
+.header--margin {
+	margin-bottom: 52px;
+}
+
+.heder__logo {
+	margin-right: 88px;
+}
+
+.header__menu {
+	display: flex;
+	gap: 40px;
+	margin-right:75px ;
+	align-items: center;
+}
+
+.header__menu-item {
+	color: #807D7E;
+font-family: "Causten";
+font-size: 22px;
+font-weight: 500;
+transition: all 0.3s;
+}
+
+.header__menu-item:hover {
+	color: #302b2c;
+	text-decoration: underline;
+}
+
+.header__seach {
+	align-items: center;
+	display: flex;
+	margin-right: 76px;
+	
+}
+
+
+.header__seach-link{
+background: #F6F6F6;
+color: #807D7E;
+font-family: "Causten";
+font-size: 16px;
+padding: 12px 22px;
+border-radius: 8px;
+min-width: 267px;
+}
+
+.header__seach-link::before {
+	display: inline-block;
+	content: "";
+	background: url("../img/search.svg")left/cover;
+	height: 20px;
+	width: 20px;
+	margin-right: 12px;
+	vertical-align: bottom;
+}
+
+.header__component {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+}
+
+.header__sub-menu {
+	margin-top: 23px;
+	
+}
+
+.header__sub-list{
+	display: flex;
+}
+
+.header__sub-list li:not(:last-child)::after {
+background: url("../img/left.svg")center/cover;
+width: 5px;
+height: 11px;
+display: inline-block;
+content: "";
+margin: 0 15px;
+}
+
+.header__sub-item {
+	color: #807D7E;
+font-family: "Causten";
+font-size: 18px;
+font-weight: 500;
+}
+
+.header__sub-item span {
+	color: #3C4242;
+font-family: "Causten";
+font-size: 18px;
+font-weight: 500;
+transition: all 0.3s;
+}
+
+.header__sub-item:hover {
+	color: #232727;
+}
+
+.mid-content__container{
+	display: flex;
+	gap: 15px;
+}
+
+.mid-content__first-column {
+	max-width: 304px;
+	margin-right: 40px;
+}
+
+
+.mid-content__title-order {
+	color: #3C4242;
+font-family: "Core Sans C";
+font-size: 28px;
+font-weight: 600;
+line-height: 1.2;
+letter-spacing: 0.56px;
+margin-bottom: 10px;
+}
+
+.mid-content__title-order::before {
+	content: "";
+	display: inline-block;
+	background: #8A33FD;
+	border-radius: 9px;
+	width: 6px;
+	height: 28px;
+	margin-right: 15px;
+}
+
+.mid-content__welcome {
+	color: #807D7E;
+font-family: "Core Sans C";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 2.4;
+letter-spacing: 0.28px;
+margin-bottom: 30px;
+}
+
+.mid-content__list-item {
+	color: #807D7E;
+font-family: "Causten";
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.mid-content__list li:nth-child(1)::before{
+	content: "";
+	display: inline-block;
+	background: url("../img/myorders.svg")left/cover;
+	width: 22px;
+	height: 22px;
+	margin-right: 15px;
+	vertical-align: bottom;
+}
+
+.mid-content__list li:nth-child(2)::before {
+	content: "";
+	display: inline-block;
+	background: url("../img/heart.svg")left/cover;
+	width: 22px;
+	height: 22px;
+	margin-right: 15px;
+	vertical-align: bottom;
+
+}
+.mid-content__list li:nth-child(3)::before{
+	content: "";
+	display: inline-block;
+	background: url("../img/user.svg")left/cover;
+	width: 22px;
+	height: 22px;
+	margin-right: 15px;
+	vertical-align: bottom;
+}
+.mid-content__list li:nth-child(4)::before{
+	content: "";
+	display: inline-block;
+	background: url("../img/signout.svg")left/cover;
+	width: 22px;
+	height: 22px;
+	margin-right: 15px;
+	vertical-align: bottom;
+}
+
+.mid-content__list li:not(:last-child) {
+	margin-bottom: 30px;
+}
+
+
+.mid-content__list {
+	margin-left: 74px;
+}
+
+
+.mid-content__second-column {
+	max-width: 895px;
+}
+
+.mid-content__title {
+	color: #3C4242;
+font-family: "Core Sans C";
+font-size: 28px;
+font-weight: 600;
+line-height: 1.2;
+letter-spacing: 0.56px;
+margin-bottom: 50px;
+}
+
+.mid-content__title::before {
+	display: inline-block;
+	content: "";
+	background: url("../img/arrow.svg")left/cover;
+	vertical-align: center;
+	margin-right: 10px;
+	width: 20px;
+	height: 20px;
+}
+
+.mid-content__order {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	padding: 27px 47px 28px 47px;
+	border-radius: 8px;
+	background: #F6F6F6;
+}
+
+.mid-content__orderno {
+	color: #3C4242;
+text-align: center;
+font-family: "Causten";
+font-size: 20px;
+font-weight: 600;
+margin-bottom: 10px;
+}
+
+.mid-content__info p {
+	color: #807D7E;
+font-family: "Causten";
+font-size: 16px;
+font-weight: 500;
+}
+
+.mid-content__coast{
+	display: flex;
+	align-items: center;
+}
+
+.mid-content__coast-item {
+	color: #807D7E;
+text-align: right;
+font-family: "Causten";
+font-size: 18px;
+font-weight: 600;
+
+}
+
+.mid-content__coast-item span {
+	color: #3C4242;
+	font-family: "Causten";
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.mid-content__order {
+	margin-bottom: 50px;
+}
+
+.mid-content__grafik {
+	max-width: 630px;
+	margin: 0 auto;
+}
+.mid-content__grafik--margin  {
+	margin-bottom: 50px;
+}
+
+.mid-content__line-grafik {
+	padding-left: 30px;
+	max-width: 579px;
+	margin-bottom: 10px;
+	
+}
+
+.mid-content__item-grafik {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.mid-content__item-grafik h5 {
+	color: #000;
+text-align: center;
+font-family: "Causten";
+font-size: 14px;
+font-weight: 600;
+}
+
+.mid-content__item-grafik span {
+	color: #BEBCBD;
+text-align: center;
+font-family: "Causten";
+font-size: 14px;
+font-weight: 600;
+}
+
+.mid-content__total {
+	display: flex;
+	gap: 37px;
+	padding: 24px 29px;
+	border-radius: 8px;
+	background: #F6F6F6;
+	margin-bottom: 80px;
+}
+
+.mid-content__date {
+	color: #807D7E;
+font-family: "Causten";
+font-size: 16px;
+font-weight: 600;
+}
+
+.mid-content__success {
+	color: #3C4242;
+font-family: "Causten";
+font-size: 16px;
+font-weight: 600;
+}
+
+
+.bot-content__order {
+	display: flex;
+border-radius: 8px;
+background: #F6F6F6;
+padding: 43px 39px 30px 50px;
+justify-content: space-between;
+gap: 10px;
+
+}
+
+
+
+
+
+
+.bot-content__block {
+	display: flex;
+	gap: 33px;
+	margin-right: 146px;
+}
+
+.bot-content__rigt {
+	display: flex;
+	gap: 60px;
+}
+
+.bot-content__coast::after {
+	content: "";
+	display: inline-block;
+	background: url("../img/closecross.svg")center/cover;
+	margin-left: 120px;
+	width:22px ;
+	height:22px ;	
+}
+
+.bot-content__title {
+	color: #3C4242;
+font-family: "Causten";
+font-size: 22px;
+font-weight: 700;
+letter-spacing: 0.44px;
+margin-bottom: 10px;
+}
+
+.bot-content__info p,
+.bot-content__qty,
+.bot-content__coast {
+	color: #807D7E;
+font-family: "Causten";
+font-size: 22px;
+font-weight: 500;
+letter-spacing: 0.44px;
+}
+
+.bot-content__info span,
+.bot-content__qty span {
+	color: #3C4242;
+font-family: "Causten";
+font-size: 22px;
+font-weight: 700;
+letter-spacing: 0.44px;
+}
+
+.main {
+	margin-bottom: 100px;
+}
+
+.footer{
+background: #3C4242;
+padding-top: 50px;
+}
+
+.footer__container {
+	max-width: 1059px;
+	margin: 0 auto;
+
+}
+
+.footer__menu {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	padding-right: 20px;
+}
+
+.footer__title-list {
+	color: #F6F6F6;
+font-family: "Causten";
+font-size: 28.579px;
+font-weight: 700;
+line-height: 2.1;
+margin-bottom: 15px;
+}
+
+.footer__list {
+	color: #F6F6F6;
+font-family: "Causten";
+font-size: 18px;
+font-weight: 500;
+line-height: 2.1;
+margin-left: 80px;
+}
+
+.footer__list li:not(:last-child) {
+	margin-bottom: 5px;
+}
+
+.footer__list li:hover {
+	color:#b9afaf;
+}
+
+.footer__title-load {
+	color: #F6F6F6;
+font-family: "Causten";
+font-size: 28.579px;
+font-weight: 700;
+line-height: 2.1;
+text-align: right;
+margin-right: 157px;
+}
+
+.footer__social-container{
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer__social {
+	display: flex;
+	gap: 10px;
+	margin-left: 83px;
+}
+
+.footer__app-section {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	padding-right: 120px;
+}
+
+.footer__load {
+	display: flex;
+}
+
+.footer__app--android::before {
+content: "";
+display: inline-block;
+background: url("../img/googleapp.svg")center/cover;
+width: 30px;
+height:33px;
+}
+
+.footer__app {
+	display: flex;
+	align-items:center;
+	gap: 10px;
+}
+
+.footer__title {
+	color: #FFF;
+font-family: "Causten";
+font-size: 10px;
+font-weight: 400;
+}
+
+.footer__app-info p {
+	color: #FFF;
+font-family: "Causten";
+font-size: 18px;
+font-weight: 400;
+}
+
+.footer__app--iphone::before {
+	content: "";
+display: inline-block;
+background: url("../img/appstore.svg")center/cover;
+width: 30px;
+height:33px;
+}
+
+.footer__download {
+	padding-bottom: 50px;
+	border-bottom: 1px solid #BEBCBD;;
+}
+
+.footer__text {
+	padding-top: 29px;
+	color: #F6F6F6;
+font-family: "Causten";
+font-size: 29px;
+font-weight: 700;
+line-height: 2;
+padding-bottom: 34px;
+border-bottom: 1px solid #BEBCBD;;
+}
+
+.footer-end {
+	color: #FFF;
+font-family: "Causten";
+font-size: 18px;
+font-weight: 700;
+line-height: 2;
+text-align: center;
+margin-top: 37px;
+margin-bottom: 59px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

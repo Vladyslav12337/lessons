@@ -1,0 +1,437 @@
+@import  url("fonts.css");
+@import  url("reset.css");
+
+
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+}
+
+
+.products {
+	background: url("../img/pngegg.webp") no-repeat;
+	background-position: right bottom;
+	
+
+}
+
+.products__container {
+	max-width: 1328px;
+	margin: 0 auto;
+	padding-left: 80px;
+	padding-right: 80px;
+}
+
+.products__title {
+	color: #000;
+	font-family: "DM Serif Text";
+	font-size: 58px;
+	font-weight: 400;
+	margin-bottom: 27px;
+}
+
+.products__sub-title {
+	color: #606060;
+font-family: "Inter";
+font-size: 20px;
+font-weight: 400;
+line-height: 1.8;
+margin-bottom: 30px; 
+}
+
+.products__block {
+	display: flex;
+	gap: 48px;
+	flex-wrap: wrap;
+	
+}
+
+.products__cover-img {
+
+}
+.products__img {
+max-width: 100%;
+max-height: 100%;
+aspect-ratio: 357 / 240;
+object-fit: cover;
+
+}
+
+.products__title-card {
+	color: #000;
+font-family: "DM Serif Text";
+font-size: 24px;
+font-weight: 400;
+line-height: 28.8px;
+margin-bottom: 16px;
+}
+
+.products__card {
+	flex: 1 1 30%;
+	
+}
+
+
+
+
+.products__card p{
+color: #000;
+font-family: "Inter";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 1.6;
+margin-bottom: 8px;
+}
+
+.products__link {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.products__read-link {
+	color: #F55529;
+font-family: "Inter";
+font-size: 16px;
+font-weight: 800;
+line-height: 24px;
+}
+
+.products__read-link:hover {
+	text-decoration: underline;
+	color: #b84121;
+}
+
+.products--margin,
+.jewelery--margin {
+	margin-bottom: 100px;
+}
+
+@media (max-width:1118px) {
+
+	.products__card {
+		flex: 0 0 45%;
+		
+	}
+}
+
+@media (max-width:777px) {
+
+	.products__card {
+		flex: 0 0 100%;
+		
+	}
+}
+
+@media (max-width:777px){
+	.products {
+		background: none;
+}
+
+}
+
+/*----------------------------------------------------------*/
+
+.jewelery__container {
+	max-width: 1173px;
+	margin: 0 auto;
+}
+
+.jewelery__title {
+	color: #291403;
+font-family: "DM Serif Text";
+font-size: 58px;
+font-weight: 400;
+margin-bottom: 27px;
+text-align: center;
+}
+
+.jewelery__sub-title {
+	color: #818181;
+text-align: center;
+font-family: "Cormorant Infant";
+font-size: 30px;
+font-weight: 700;
+line-height: 1.4;
+margin-bottom: 62px;
+}
+
+.jewelery__block {
+	display: flex;
+	gap: 30px;
+	flex-wrap: wrap;
+	flex: 1 0 25%;
+}
+
+.jewelery__card {
+	display: flex;
+	flex-direction: column;
+}
+
+.jewelery__link-img {
+	margin-bottom: 17px;
+	
+}
+
+.jewelery__img{
+transition: all 0.3s;
+}
+
+.jewelery__img:hover {
+	transform:scale(1.1);
+}
+
+.jewelery__cover-img {
+	overflow: hidden;
+}
+
+
+.jewelery__link-title,
+.jewelery__link-coast {
+	color: #000;
+font-family: "Cormorant Infant";
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 1.4;
+}
+
+.jewelery__link-coast:hover {
+	text-decoration: underline;
+}
+
+.jewelery__link-title:hover {
+	text-decoration: underline;
+}
+
+.jewelery__img {
+max-width: 100%;
+max-height: 100%;
+aspect-ratio: 271 / 270;
+object-fit: cover;
+}
+
+.jewelery__block {
+	margin-bottom: 76px;
+}
+
+.jewelery__button {
+	text-align: center;
+}
+
+.jewelery__link-button {
+	color: #FFF;
+font-family: "Ubuntu";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 1.8;
+background: #FF7A49;
+padding: 12px 42.5px;
+transition: all 0.3s;
+}
+
+.jewelery__link-button:hover{
+	background: #a74521;
+}
+
+
+@media(max-width:1200px){
+	.jewelery__card {
+		flex: 1 0 30%;
+	}
+}
+
+@media(max-width:938px){
+	.jewelery__card {
+		flex: 1 0 47%;
+	}
+}
+
+@media(max-width:670px){
+	.jewelery__card {
+		flex: 1 0 100%;
+		align-items: center;
+	}
+
+}
+
+
+.our {
+	padding: 94px 215px;
+	background: #0E333D;
+}
+
+.our__container {
+	max-width: 1375px;
+	margin: 0 auto;
+}
+
+.our__title {
+	color: #FFF;
+	font-family: "DM Serif Text";
+	font-size: 48px;
+	font-weight: 400;
+	line-height: 1.27;
+	margin-bottom: 23px;
+	text-align: center;
+}
+
+.our__sub-title {
+color: #EBEBEB;
+font-family: "Raleway";
+font-size: 20px;
+font-weight: 500;
+line-height: 1.27; 
+margin-bottom: 34px;
+text-align: center;
+}
+
+.our__menu {
+	display: flex;
+	gap: 41px;
+	justify-content: center;
+	margin-bottom: 77px;
+}
+
+.our__item-menu {
+	color: #FFF;
+
+font-family: "Raleway";
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 127%;
+transition: all 0.3s;
+}
+
+.our__block {
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1 0 25%;
+	gap: 30px;
+}
+
+.our__card {
+	display: flex;
+	flex-direction: column;
+}
+
+.our__link-img {
+	margin-bottom: 17px;
+}
+
+.our__link-title,
+.our__link-coast {
+	color: #FFF;
+font-family: "Cormorant Infant";
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 1.4;
+transition: all 0.3s;
+}
+
+.our__img {
+	max-width: 100%;
+	min-height: 100%;
+	aspect-ratio: 271 / 270;
+	object-fit: cover;
+	transition: all 0.3s;
+}
+
+.our__img:hover {
+	transform: scale(1.1);
+}
+
+.our__link-title:hover,
+.our__link-coast:hover,
+.our__item-menu:hover {
+text-decoration: underline;
+}
+
+.our__img-cover {
+	overflow: hidden;
+	border-radius: 2%;
+}
+
+@media(max-width:1178px){
+	.our__card {
+		flex: 1 0 30%;
+	}
+}
+
+@media(max-width:938px){
+	.our__card {
+		flex: 1 0 47%;
+	}
+}
+
+@media(max-width:670px){
+	.our__card {
+		flex: 1 0 100%;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

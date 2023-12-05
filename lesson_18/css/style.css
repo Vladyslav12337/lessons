@@ -429,7 +429,8 @@ text-decoration-line: underline;
 	transform: translate(0px, 0px);
 }
 .hero__content  {
-justify-content: center;
+justify-content: space-around;
+
 flex: 1 1 auto;
 }
 
@@ -444,11 +445,19 @@ flex: 1 1 auto;
 
 }
 
+@media (max-width: 1155px) {
+.page__hero {
+padding: 150px 0px 0px 0px;
+}
+}
+
 @media (max-width: 1024px) {
 .page__hero {
 padding: 100px 0px 0px 0px;
 }
 }
+
+
 
 @media (max-width: 768px) {
 .page__hero {

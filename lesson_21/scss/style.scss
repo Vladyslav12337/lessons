@@ -1,0 +1,1080 @@
+@import "_reset.scss";
+@import "_fonts.scss";
+@mixin content($color: #fff, $font-size: 32px, $font-weight: 500, $font-family: "Core Sans C", $margin-bottom: 40px){
+color:$color ;
+font-size: $font-size;
+font-weight: $font-weight;
+font-family: $font-family;
+margin-bottom: $margin-bottom;
+}
+
+%adaptimg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+%title-before{
+	color: #3C4242;
+	font-family: "Core Sans C";
+	font-size: 34px;
+	font-weight: 600;
+	line-height: 0.98;
+	letter-spacing: 0.68px;
+	&:before{
+		display: inline-block;
+		content:"";
+		background: #8A33FD;
+		width: 6px;
+		height: 30px;
+		border-radius: 10px;
+		margin-right: 20px;
+}}
+
+
+
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+}
+.wrapper>main {
+	flex-grow: 1;
+}
+
+.page {
+}
+.page--margin {
+	margin-bottom: 135px;
+}
+
+
+.header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 5;
+background: #fff;
+&__container {
+   max-width: 1267px;
+   margin: 0 auto;
+   padding-left: 15px;
+   padding-right: 15px;
+   display: flex;
+   justify-content: space-between;
+   gap: 10px;
+   min-height: 100px;
+   align-items: center;
+   position: relative;
+   @media (max-width: 1008px) {
+      min-height: 50px;
+   }
+}
+
+&__logo {
+   background: #ffffff;
+   position: relative;
+   z-index: 5;
+}
+
+&__nav {
+}
+
+&__menu-body {
+   transition: all 0.3s;
+   @media (max-width: 1008px) {
+      position: fixed;
+		z-index: 4;
+      top: 0;
+      left: -100%;
+      height: 100%;
+      width: 100%;
+      background: rgb(207, 199, 250);
+      padding: 90px 15px 15px 15px;
+      overflow: auto;
+   }
+   &:before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 100%;
+      width: 100%;
+      height: 50px;
+      background: rgb(233, 185, 233);
+      z-index: 2;
+   }
+	.menu-open &,
+	.menu-open &:before {
+		left: 0;
+	}
+}
+
+&__menu {
+   display: flex;
+   justify-content: space-between;
+   column-gap: 40px;
+   row-gap: 10px;
+   flex-wrap: wrap;
+   @media (max-width: 1008px) {
+      flex-direction: column;
+      align-items: flex-end;
+      row-gap: 15px;
+   }
+}
+
+&__item-menu {
+}
+
+&__link {
+   transition: all 0.3s;
+   color: #807d7e;
+   font-family: "Causten";
+   font-size: 22px;
+   font-weight: 500;
+   @media (any-hover: hover) {
+      &:hover {
+      text-decoration: underline;
+      color: #494646;
+      }
+   }
+   @media (max-width: 991.98px) {
+      font-size: 28px;
+   }
+}
+
+&__link--fw {
+   font-weight: 700;
+}
+
+&__form {
+   
+}
+
+&__actions {
+   display: flex;
+   justify-content: space-between;
+   gap: 12px;
+   position: relative;
+   z-index: 5;
+   background: #ffffff;
+}
+
+&__link-actions {
+   transition: all 0.3s;
+   @media (any-hover: hover) {
+      &:hover {
+      transform: scale(1.3);
+      }
+   }
+}
+
+.icon-menu {
+   
+		display: none;
+		flex: 0 0 25px;
+		height: 18px;
+		position: relative;
+		z-index: 5;
+		@media(max-width:1008px) {
+			display: block;
+		}
+		&:before,
+		&:after,
+		span {
+			
+			content: "";
+			height: 2px;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			background: #000;
+		}
+		&:before {
+			top: 0;
+		}
+		&:after {
+			bottom: 0;
+		}
+		span{
+			top: 50%;
+			margin-top: -1px;
+		}
+		.menu-open & span{
+			transform: scale(0);
+		}
+	
+		.menu-open &::after {
+			transform: rotate(45deg);
+			top: 50%;
+			
+		}
+		.menu-open &::before {
+			transform: rotate(-45deg);
+			top: 50%;
+			
+		}
+	}
+
+}
+.menu-open body {
+	overflow: hidden;
+}
+
+
+/*=========================================================================================================================*/
+// при кліку на кнопку на ширині вюпорту менше 580px буде з'являтись поверх усієї шапки поле для введення інформації пошуку
+/*=========================================================================================================================*/
+
+//стилі для форми
+.search {
+background: #f6f6f6;
+position: relative;
+border-radius: 8px;
+overflow: hidden;
+min-width: 40px;
+min-height: 42px;
+
+  // .search__body
+  // стилі для поля з кнопкою
+&__body {
+   overflow: hidden;
+   input {
+      // стилі для поля введення
+      padding: 12px 48px;
+      background: #f6f6f6;
+      &:focus ~ button {
+      background: #38cdd8;
+      }
+   }
+   @media (max-width: 579.98px) {
+      opacity: 0;
+      display: none; // приховуєм поле з кнопкою
+      .search__open & {
+      position: fixed;
+      display: block;
+      top: 0;
+      left: 0;
+        z-index: 12; // робим поле поверх шапки
+      opacity: 1;
+      min-width: 100%;
+      height: 50px;
+      background-color: rgb(204, 195, 195);
+      transition: opacity 0.3s;
+      input {
+         width: 100%;
+         height: 100%;
+         background: #e2e2e2;
+      }
+      }
+   }
+}
+  // .search__button
+&__button,
+&__icon {
+    // стилі для обох кнопок
+   position: absolute;
+   left: 1px;
+   top: 50%;
+   width: 40px;
+   height: 42px;
+   transform: translateY(-50%);
+   z-index: 5;
+   border-radius: 8px;
+   transition: background-color 0.3s;
+    // стилі для іконок
+   img {
+      width: 22px;
+      height: 22px;
+   }
+}
+  // .search__icon
+&__icon {
+   .search__open & {
+      //приховуєм кнопку коли відкрито поле введення
+      display: none;
+   }
+   @media (min-width: 580px) {
+      // приховуєм кнопку на потрібному розширенні
+      display: none;
+   }
+}
+}
+/*=========================================================================================================================*/
+
+.page {
+
+	&__hero {
+		margin-bottom: 130px;
+	}
+}
+.hero {
+	position: relative;
+	padding: 14% 0 16% 13%;
+
+	&__container {
+		margin: 0 auto;
+		max-width: 1378px;
+
+	}
+
+
+	&__img {
+		@extend %adaptimg;
+		position: absolute;
+		top: 0;
+		left: 0;
+		aspect-ratio: 1376 / 716;
+		object-position: top ;
+		
+	}
+
+	&__content {
+
+		position: relative;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		max-width: 450px;
+		@media (max-width: 768px) {
+			max-width: 300px;
+		}
+		@media (max-width: 420px){
+			max-width: 200px;
+		}
+	}
+
+	&__sub-title {
+		@include content;
+		@media (max-width: 768px){
+			font-size: 22px;
+		}
+	}
+
+	&__title {
+		@include content(#fff, 78px,800, "Core Sans C", 40px);
+		@media (max-width: 768px){
+			font-size: 42px;
+		}
+	}
+
+	&__choise-title {
+		@include content(#fff, 24px,500, "Core Sans C", 40px);
+		@media (max-width: 768px){
+			font-size: 22px;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		border-radius: 8px;
+		background: #FFF;
+		padding: 16px 72px;
+		color: #3C4242;
+		text-align: center;
+		font-family: "Causten";
+		font-size: 24px;
+		font-weight: 700;
+		transition: 0.3s;
+		@media(any-hover:hover){
+			&:hover {
+				background: #e4d7d7;
+			}
+		}
+		@media (max-width: 516px){
+			padding: 10px 30px;
+		}
+	}
+}
+
+/*======================================================*/
+
+
+.page {
+	&__sell{
+		margin-bottom: 100px;
+	}
+}
+.sell {
+	&__container {
+		max-width: 1270px;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 30px;
+		@media(max-width:900px ) {
+			display: grid;
+			grid-template-columns: repeat(1, 0.8fr);
+			gap: 30px;
+			justify-content: center;
+		}
+		@media (max-width: 480px){
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: 30px;
+		justify-content: center;
+	}
+	}
+
+	&__girl {
+		position: relative;
+		display: flex;
+		align-items: flex-start;
+		padding: 57px 0px 55px 30px;
+	}
+
+	&__img{
+		border-radius: 15px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		@extend %adaptimg;
+		@media (max-width: 500px) {
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		max-width: 280px;
+		position: relative;
+		z-index: 2;
+		@media (max-width: 718px) {
+			max-width: 200px;
+		}
+		@media (max-width: 420px) {
+			max-width: 150px;
+		}
+	}
+
+	&__sub-title {
+		@include content(#fff, 18px,800, "Montserrat", 18px);
+line-height: 1.6;
+letter-spacing: 0.251px;
+margin-bottom: 24px;
+@media(max-width: 480px){
+	margin-bottom: 15px;
+}
+	}
+
+	&__title {
+		@include content(#fff, 34px,800, "Core Sans C", 10px);
+line-height: 45.1px;
+margin-bottom: 10px;
+@media(max-width: 480px){
+	font-size: 28px;
+}
+	}
+
+	&__up {
+		@include content(#fff, 16px,500, "Core Sans C", 42px);
+line-height: 1.56;
+letter-spacing: 0.251px;
+margin-bottom: 42px;
+@media(max-width: 480px){
+	margin-bottom: 15px;
+}
+	}
+
+	&__link {
+color: #FFF;
+font-family: "Core Sans C";
+font-size: 20px;
+font-weight: 800;
+line-height: 1.5;
+@media (any-hover:hover){
+	&:hover{
+	text-decoration: underline;
+}
+}
+	}
+}
+/*================================================================*/
+
+
+.page {
+
+	&__new {
+		max-width: 1270px;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin: 0 auto;
+		margin-bottom: 100px;
+	}
+}
+.new {margin-bottom: 100px;
+
+	&__title {
+@extend %title-before;
+margin-bottom: 70px;
+
+		@media (max-width:780px) {
+			margin-bottom: 30px;
+		}
+
+
+		@media (max-width:470px) {
+			font-size: 28px;
+			text-align: center;
+		}
+	}
+
+	&__container {
+		margin: 0 auto;
+		max-width: 1170px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 38px;
+		@media (max-width:768px) {
+			grid-template-columns: repeat(2, 1fr);
+			row-gap: 50px;
+		}
+		@media (max-width:425px) {
+			grid-template-columns: repeat(1, 1fr);
+			row-gap: 50px;
+		}
+	}
+
+	&__card {
+		img {
+			border-radius: 12px;
+			@extend %adaptimg;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	&__img{
+
+	}
+
+	&__link{
+		display: inline-block;
+		@media (any-hover:hover){
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__cover {
+		position: relative;
+		padding-bottom: 100%;
+		margin-bottom: 35px;
+		@media (max-width:768px){
+				margin-bottom: 10px;
+		}
+	}
+
+&__title-card {
+	@include content(#3C4242, 20px,700, "Causten", 0px);
+	letter-spacing: 0.2px;
+	@media (max-width:768px){
+		font-size: 28px;
+	}
+}
+}
+
+/*====================================================================*/
+
+.page {
+
+		&__fashion {
+			margin-bottom: 100px;
+		}
+}
+.fashion {
+
+		&__container {
+			max-width: 1270px;
+			padding-left: 15px;
+			padding-right: 15px;
+			margin: 0 auto;
+			display: flex;
+			flex: 1 1 50%;
+			@media (max-width:768px){
+				display: flex;
+				flex-direction: column;
+				
+			}
+		}
+
+		&__left {
+			position: relative;
+			padding-top: 14%;
+			padding-left: 6%;
+			flex-basis: 613px;
+			@media (max-width:768px){
+				padding-left: 16%;
+				padding-right: 16%;
+				
+			}
+		}
+
+		&__img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			@extend %adaptimg;
+		}
+
+		&__img-right{
+			@extend %adaptimg;
+		}
+
+		&__content {
+
+			p{
+				@include content(#fff, 20px,300, "Causten", 50px);
+				letter-spacing: 1px;
+				@media (max-width:1058px){
+					font-size: 16px;
+					margin-bottom: 25px;
+				}
+				@media (max-width:1058px){
+					font-size: 20px;
+					margin-bottom: 50px;
+				}
+			}
+			position: relative;
+			z-index: 2;
+			top: 0;
+			left: 0;
+			max-width: 470px;
+			max-height: 285px;
+		}
+
+		&__title {
+			@include content(#fff, 34px,800, "Core Sans C", 30px);
+			line-height: 1.47;
+			letter-spacing: 0.208px;
+			@media (max-width:1058px){
+				font-size: 24px;
+			}
+			@media (max-width:768px){
+				font-size: 34px;
+			}
+
+
+		}
+
+		&__link {
+			display: inline-block;
+			border-radius: 8px;
+			background: #FFF;
+			padding: 12px 44px;
+			color: #3C4242;
+			text-align: center;
+			font-family: "Causten";
+			font-size: 18px;
+			font-weight: 600;
+			transition: 0.3s;
+			@media (any-hover:hover){
+				&:hover {
+					background: #c7c3c3;
+				}
+			}
+		}
+
+		&__right {
+			flex-basis: 626px;
+		}
+}
+
+/*======================================================================================*/
+
+
+.page {
+	
+	&__man,
+	&__girl {
+		margin-bottom: 100px;
+	}
+
+	&__item {
+
+		margin-bottom: 100px;
+
+	}
+}
+.item {
+
+	&__title {
+		padding-left: 15px;
+		margin: 0 auto;
+		max-width: 1270px;
+@extend %title-before;
+margin-bottom: 70px;
+
+		@media (max-width:768px) {
+			margin-bottom: 30px;
+		}
+		@media (max-width:470px) {
+			font-size: 28px;
+			text-align: center;
+		}
+	}
+
+	&__container {
+		max-width: 1270px;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 50px;
+
+		@media(max-width:768px) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 10px;
+			justify-items: center;
+		}
+		@media(max-width:470px){
+			grid-template-columns: repeat(1, 1fr);
+			row-gap: 25px;
+		}
+		@media (max-width: 580px) {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+
+	&__card {
+		max-width: 270px;
+	}
+
+	&__link {
+		display: inline-block;
+		margin-bottom: 15px;
+		img{
+			@extend %adaptimg;
+			aspect-ratio: 270 / 393;
+			transition: all 0.3s;
+			border-radius: 10px;
+			@media(any-hover:hover) {
+				&:hover {
+					transform: scale(1.03);
+				}
+			}
+		}
+
+
+	}
+
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
+		align-items: center;
+	
+	}
+
+	&__name-info {
+	}
+
+	&__link-name {
+		color: #2A2F2F;
+		font-family: "Causten";
+		font-size: 17.875px;
+		font-weight: 700;
+		line-height: 1.56;
+		letter-spacing: -0.715px;
+		@media(any-hover:hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__link-sub {
+		color: #7F7F7F;
+		font-family: "Causten";
+		font-size: 13.407px;
+		font-weight: 500;
+		line-height: 2.08;
+		letter-spacing: -0.536px;
+		@media(any-hover:hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__arow {
+img {
+	@extend %adaptimg;
+	aspect-ratio: 18 / 10;
+	transition: 0.3s;
+	@media (any-hover:hover) {
+		&:hover {transform: scale(1.2);}
+	}
+}
+	}
+}
+
+
+/*****************************************************************************/
+
+.page {
+
+	&__fedback {
+	}
+}
+.fedback {
+
+	&__title {
+		@extend %title-before;
+		margin: 0 auto;
+		margin-bottom: 70px;
+		padding-left: 15px;
+		max-width: 1270px;
+		@media (max-width:900px) {
+			margin-bottom: 30px;
+			text-align: center;
+		}
+	}
+
+	&__container {
+		max-width: 1270px;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		
+		gap: 23px;
+		@media (max-width:900px){
+			flex-wrap: wrap;
+			justify-content: center;
+			
+		}
+
+	}
+
+	&__card {
+		p{
+			overflow: hidden;
+			color: #807D7E;
+			font-family: "Causten";
+			font-size: 14px;
+			font-weight: 400;
+			letter-spacing: 0.28px;
+		}
+		flex: 0 1 30%;
+		padding: 24px;
+		border:  1.8px solid #BEBCBD;
+		border-radius: 10px;
+		max-width: 398px;
+		@media (max-width:900px){
+			flex-wrap: wrap;
+			justify-content: center;
+			flex: 0 1 45%;
+		}
+
+		@media (max-width:580px) {
+			flex: 0 1 95%;
+		} 
+	}
+
+	&__actions {
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
+		margin-bottom: 20px;
+	}
+	
+	&__cover {
+		img {
+			@extend %adaptimg;
+			aspect-ratio: 59 / 59;
+			
+		}
+		display: flex;
+		flex: 0 0 59px;
+	}
+
+	&__sub {
+		@include content(#3C4242, 22px,500, "Core Sans C", 20px);
+		letter-spacing: 0.44px;
+	}
+
+	&__star {
+		display: flex;
+		gap: 4px;
+	}
+}
+
+/*----------------------------------------------------------*/
+
+
+.footer {
+	background: #3C4242;
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	&__container {
+		margin: 0 auto;
+		max-width: 1220px;
+		padding-left: 6%;
+		padding-right: 7%;
+	}
+
+	&__ifo {
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
+		flex-wrap: wrap;
+		@media (max-width:982px){
+			
+		}
+		@media (max-width:968px){
+			justify-content: space-between;
+		}
+
+		@media (max-width:600px){
+gap: 15px;
+margin-bottom: 15px;
+		}
+	}
+
+	&__nav {
+	}
+
+	&__title-nav {
+		@include content(#fff, 29px,700, "Causten", 15px);
+	line-height: 2.1;
+	}
+
+	&__list {
+	}
+
+	&__item-list {
+		color: #F6F6F6;
+font-family: "Causten";
+font-size: 18px;
+font-weight: 500;
+line-height: 2.1;
+		&:not(:last-child) {
+			margin-bottom: 5px;
+		}
+	}
+
+	&__link {
+		@media (any-hover:hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	
+
+
+
+		&__app {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 10px;
+			border-bottom: 1px solid #BEBCBD;
+			padding-bottom: 50px;
+		}
+
+		&__social {
+			display: flex;
+			align-self: flex-end;
+			
+		}
+
+		&__media {
+			display: flex;
+			justify-content: space-between;
+			gap: 5px;
+			flex: 0 1 170px;
+			img {
+				@extend %adaptimg;
+				aspect-ratio: 37/37;
+				border-radius: 10px;
+			}
+		}
+
+
+		&__load {
+			margin-right: 13%;
+		}
+
+		&__title-load {
+			@include content(#fff, 29px,700, "Causten", 19px);
+			line-height: 2.1;
+		}
+
+		&__block {
+			display: flex;
+			gap: 30px;
+		}
+
+		&__load-block {
+			display: flex;
+			gap: 5px;
+		}
+
+		&__con {
+		}
+
+		&__info {
+			@include content(#fff, 10px,400, "Causten", 0px);
+
+		}
+
+		&__phone {
+			@include content(#fff, 18px,400, "Causten", 0px);
+		}
+
+		
+
+		&__sub-title {
+			@include content(#fff, 29px,700, "Causten", 71px);
+line-height: 2;
+border-bottom: 1px solid #BEBCBD;
+padding-top: 28px;
+padding-bottom: 34px;
+@media (max-width:700px) {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 25px;
+	
+}
+			}
+	
+		&__end-title {
+			@include content(#fff, 18px,700, "Causten", 0px);  
+			text-align: center;
+			line-height: 2;
+			}
+	
+	&__link-phone {
+		@media (any-hover:hover){
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,421 @@
+@use "sass:math";
+@import "_functions";
+@import "_reset.scss";
+@import "_fonts.scss";
+
+
+
+
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+}
+
+
+.header {
+
+	&__container {
+		max-width: toRem(1270);
+		margin: 0 auto;
+		padding-left: toRem(10);
+		padding-right: toRem(10);
+	}
+
+	&__top-part {
+		background: #37393F;
+	display: flex;
+	gap: 10px;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: toRem(19);
+	padding-bottom: toRem(19);
+	padding-right: toRem(3);
+	padding-left: toRem(3);
+	position: relative;
+	z-index: 5;
+	}
+
+	&__left-info,
+	&__right-info {
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	&__right-info{
+		@media (max-width:822px) {
+			justify-content: end;
+		}
+	}
+
+	&__adress,
+	&__mail,
+	&__time{
+		span {
+			@media (max-width:570px) {
+				display: none;
+			}
+		}
+		
+		@media (any-hover:hover){
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+		color: #FFF;
+		font-family: "Inter";
+		font-size: 14px;
+		font-weight: 400;
+		&:before {
+			content: "";
+			display: inline-block;
+			background: url("../img/geo.svg") center / cover no-repeat;
+			width: toRem(16);
+			height: toRem(22);
+			margin-right: toRem(9);
+			transform: translateY(3px);
+			transform: scale(1.05);	
+			@media (any-hover:hover) {
+				&:hover {
+					transform: scale(1.03);
+				}
+			}
+		}
+	}
+
+
+
+	&__mail {
+		&:before {
+			background: url("../img/icon.svg") center / cover no-repeat;
+			width: toRem(21);
+			height: toRem(17);
+			margin-right: toRem(11);
+			margin-top:toRem(5) ;
+			transform: translateY(0);
+
+		}
+	}
+
+	&__geo,
+	&__latter,
+	&__grafik
+	{transition: all 0.3s;
+		@media (any-hover:hover) {
+			&:hover{
+			transform: scale(1.03);
+		}}
+	}
+
+	/* Согласен, как-то костыльно вышло с этими псевдоэлементами, буду благодарен если напишите как правильно надо*/
+
+	&__right-info {
+	}
+
+	&__time {
+		margin-right: toRem(50);
+		&:before {
+			background: url("../img/time.svg") center / cover no-repeat;
+			width: toRem(15);
+			height: toRem(15);
+			margin-right: toRem(11);
+			margin-top:toRem(5) ;
+			transform: translateY(0);
+		}
+		@media (max-width:871px){
+			margin-right: toRem(10);
+		}
+		@media (max-width:822px){
+			margin-right: toRem(0);
+		}
+	
+	}
+
+	&__media {
+	}
+
+	&__list-media {
+		display: flex;
+		justify-content: space-between;
+		gap: toRem(9);
+		flex-wrap: wrap;
+		margin-top: toRem(5);
+	}
+
+	&__item-list {
+		transition: all 0.3s;
+		@media (any-hover:hover) {
+			&:hover{
+			transform: scale(1.2);
+		}}
+	}
+
+	&__info-link{
+
+	}
+
+	&__bot-part {
+		padding-top: toRem(33);
+		padding-bottom: toRem(33);
+		display: flex;
+		flex-wrap: wrap;
+		gap: toRem(10);
+		justify-content: space-between;
+		min-height: toRem(100);
+		@media(max-width: 960px) {
+			min-height: toRem(50);
+			padding-top: toRem(16);
+			
+		}
+		@media(max-width: 480px){
+			gap: 5px;
+		}
+	}
+
+
+	&__logo{
+		color: #37393F;
+		font-family: "Poppins";
+		font-size: toRem(25);
+		font-weight: 700;
+		span {
+			color: #6B77E5;
+		}
+		position: relative;
+		z-index: 5;
+		@media(max-width: 480px) {
+			font-size: toRem(15);
+		}
+	}
+
+	&__menu {
+		align-self: center;
+	}
+
+	&__body-menu {
+		transition: 0.3s;
+		@media (max-width: 960px) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: -100%;
+			background: rgb(107, 119, 230, 0.5);
+			padding: toRem(190) toRem(15) toRem(30) toRem(15);
+			overflow: auto;
+		}
+		@media (max-width: 480px) {
+			padding: toRem(140) toRem(15) toRem(30) toRem(15);
+		}
+
+		.menu-open &,
+		.menu-open &:before {
+			left: 0;
+		}
+		
+	}
+
+	&__list {
+		display: flex;
+		justify-content: flex-start;
+		gap: toRem(35);
+		@media(max-width: 1019px) {
+			gap: toRem(15);
+		}
+		@media(max-width: 960px) {
+			flex-direction: column;
+			align-items: end;
+		}
+	}
+
+	&__menu-item {
+		color: #37393F;
+		font-family: "Inter";
+		font-size: toRem(18);
+		transition: all 0.3s;
+		&--parent{
+			position: relative;
+			&::after{
+				background: url("../img/list.svg") center/ cover no-repeat;
+				display: inline-block;
+				content: "";
+				width: toRem(8);
+				height: toRem(4);
+				margin-left: toRem(8);
+				vertical-align: middle;
+				transition: all 0.3s;
+				@media (max-width:960px) {
+					display: none;
+				}
+			}
+			@media (any-hover:hover) {
+				&:hover::after{
+					transform: rotateZ(180deg);
+			}}
+
+		}
+		@media (any-hover:hover) {
+			&:hover{
+			text-decoration: underline;
+			color: #2d2e33;
+		}}
+		@media (any-hover:hover) {
+			&:hover .sub-menu{
+				opacity: 1;
+				visibility: visible;
+				transform: translate(0px, 0px);
+				pointer-events: all;
+		}}
+	}
+
+	&__link {
+	}
+
+	&__actions {
+		align-self: center;
+		position: relative;
+		z-index: 5;
+		
+	}
+
+	&__button {
+		transition: all 0.3s;
+		color: #FFF;
+		text-align: center;
+		font-family: "Cabin";
+		font-size: toRem(18);
+		font-weight: 600;
+		text-transform: capitalize;
+		background: #6B77E5;
+		padding: toRem(21) toRem(35);
+		@media (any-hover:hover) {
+			&:hover{
+				background: #4a56c4;
+		}}
+		@media(max-width: 480px) {
+			padding: toRem(10) toRem(5);
+			font-size: toRem(15);
+		}
+	}
+}
+.logo {
+	display: flex;
+	flex-wrap: wrap;
+	gap: toRem(10);
+	align-self: flex-start;
+}
+.sub-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	padding-top: toRem(5);
+	transform: translate( 0px, 10%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s;
+	pointer-events: none;
+	@media (max-width: 960px){
+		opacity: 1;
+		visibility: visible;
+		position: relative;
+		transform: translate(0px, 0px);
+	}
+	&__list {
+		width: toRem(110);
+		border-radius: toRem(15);
+		padding: toRem(15);
+		background: #3843a3 ;
+		color: #FFF;
+
+	}
+
+	&__item {
+		&:not(:last-child){
+			margin-bottom: toRem(10);
+		}
+		@media (any-hover:hover) {
+			&:hover{
+				text-decoration: underline;
+		}}
+	}
+
+	&__link {
+	}
+
+
+}
+.icon-menu{
+	display: none;
+	transition: all 0.3s;
+	@media (max-width:960px) {
+		display: block;
+		width: toRem(30);
+		height: toRem(30);
+		position: relative;
+		z-index: 6;
+		
+	}
+	&::before,
+	&::after,
+	span{
+		display: inline-block;
+		content: "";
+		height: toRem(2);
+		width: 100%;
+		position: absolute;
+		left: 0;
+		background: #050505;
+	}
+	&::before{
+		top: 0;
+	}
+	&::after{
+		bottom: 0;
+	}
+	span {
+		top: 50%;
+		margin-top: toRem(-1);
+	}
+	.menu-open & span{
+		transform: scale(0);
+	}
+
+	.menu-open &::after {
+		transform: rotate(45deg);
+		top: 50%;
+		
+	}
+	.menu-open &::before {
+		transform: rotate(-45deg);
+		top: 50%;
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

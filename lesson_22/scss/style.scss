@@ -15,9 +15,6 @@
 .header {
 
 	&__container {
-
-		padding-left: toRem(10);
-		padding-right: toRem(10);
 		margin-bottom: toRem(100);
 	}
 &__content{
@@ -44,9 +41,13 @@
 	&__right-info {
 		display: flex;
 		justify-content: space-between;
-		gap: 10px;
+		gap: toRem(10);
 		flex-wrap: wrap;
 		align-items: center;
+	}
+
+	&__left-info{
+		margin-left: toRem(10);
 	}
 
 	&__right-info{
@@ -141,6 +142,7 @@
 	}
 
 	&__item-list {
+		
 		img {
 			width: toRem(17);
 			height: toRem(17);
@@ -150,6 +152,9 @@
 			&:hover{
 			transform: scale(1.2);
 		}}
+		@media (max-width: 570px) {
+			padding-right: 10px;
+		}
 	}
 
 	&__info-link{
@@ -374,6 +379,7 @@
 		height: toRem(30);
 		position: relative;
 		z-index: 6;
+		margin-right: toRem(10);
 		
 	}
 	&::before,

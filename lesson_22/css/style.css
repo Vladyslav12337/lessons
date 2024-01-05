@@ -109,8 +109,6 @@ textarea {
   /* Согласен, как-то костыльно вышло с этими псевдоэлементами, буду благодарен если напишите как правильно надо*/
 }
 .header__container {
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
   margin-bottom: 6.25rem;
 }
 .header__content {
@@ -145,12 +143,15 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 10px;
+  gap: 0.625rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.header__left-info {
+  margin-left: 0.625rem;
 }
 @media (max-width: 822px) {
   .header__right-info {
@@ -254,6 +255,11 @@ textarea {
     -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
             transform: scale(1.2);
+  }
+}
+@media (max-width: 570px) {
+  .header__item-list {
+    padding-right: 10px;
   }
 }
 .header__bot-part {
@@ -508,6 +514,7 @@ textarea {
     height: 1.875rem;
     position: relative;
     z-index: 6;
+    margin-right: 0.625rem;
   }
 }
 .icon-menu::before, .icon-menu::after,

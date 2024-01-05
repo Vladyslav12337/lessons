@@ -198,7 +198,7 @@ textarea {
   }
 }
 .header__mail:before {
-  background: url("../img/icon.svg") center/cover no-repeat;
+  background: url("../img/letter.svg") center/cover no-repeat;
   width: 1.3125rem;
   height: 1.0625rem;
   margin-right: 0.6875rem;

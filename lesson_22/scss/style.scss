@@ -235,8 +235,12 @@
 		.menu-open &:before {
 			left: 0;
 		}
+
+
 		
 	}
+
+
 
 	&__list {
 		display: flex;
@@ -289,6 +293,8 @@
 				transform: translate(0px, 0px);
 				pointer-events: all;
 		}}
+
+
 	}
 
 	&__link {
@@ -417,6 +423,10 @@
 		top: 50%;
 		
 	}
+
+}
+.menu-open body {
+	overflow: hidden;
 }
 
 

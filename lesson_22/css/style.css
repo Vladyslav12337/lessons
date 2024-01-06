@@ -555,6 +555,10 @@ textarea {
   top: 50%;
 }
 
+.menu-open body {
+  overflow: hidden;
+}
+
 .expertise {
   margin: 0 auto;
   max-width: 78.125rem;

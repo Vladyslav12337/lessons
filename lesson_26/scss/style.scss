@@ -1,0 +1,92 @@
+@use "sass:math";
+@import "_functions";
+@import "_reset.scss";
+@import "_fonts.scss";
+
+.active {
+	background: #e00e0e;
+}
+.item{
+	cursor: pointer;
+}
+
+body {
+	opacity: 0;
+	transition: 0.6s;
+}
+
+body.loaded {
+	opacity: 1;
+}
+
+
+header {
+	background: lightblue;
+	padding: 20px;
+	cursor: pointer;
+	text-align: center;
+}
+
+
+
+footer{
+	background: lightcoral;
+	padding: 20px;
+	text-align: center;
+	
+}
+
+.element {
+	padding: 25px;
+	background: blue;
+	display: inline-block;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

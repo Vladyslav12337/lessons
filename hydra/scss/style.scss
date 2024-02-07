@@ -1,0 +1,329 @@
+@use "sass:math";
+@import "_functions";
+@import "_fonts.scss";
+@import "_reset.scss";
+@import "menu.scss";
+
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1440;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1302;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+.wrapper {
+  overflow: clip;
+  min-height: 100%;
+  font-family: "Montserrat";
+  background: rgb(48, 44, 66);
+}
+
+.wrapper > main {
+  flex-grow: 1;
+  
+}
+
+
+//========================================================================================================================================================
+
+.header {
+
+
+	&__container {
+		max-width: toRem(1302);
+		margin: 0 auto;
+		padding-left: toRem(15);
+		padding-right: toRem(15);
+		display: flex;
+		justify-content: space-between;
+		gap: toRe(10);
+		align-items: center;
+		position: relative;
+		z-index: 5;
+		@media (max-width:toRem(998)) {
+			justify-content: space-between;
+		}
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		position: relative;
+		z-index: 5;
+	@include adaptiveValue('margin-right', 205, 50, 0,$containerWidth, 998)
+	}
+
+	&__ico-logo{
+		width: toRem(102);
+		height: toRem(103);
+	}
+
+	&__menu {
+		display: flex;
+		justify-content: space-between;
+		gap: toRem(10);
+
+	}
+
+	&__menu-body{
+		display: flex;
+		justify-content: space-between;
+		@include adaptiveValue('gap', 140, 20, 0, $containerWidth, 998);
+		@media (max-width: toRem(998)) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 100%;
+			padding: 150px 15px 30px 15px;
+			background: linear-gradient(90.00deg, rgb(40, 32, 77),rgb(163, 155, 197) 100%);
+			overflow: auto;
+			display: flex;
+			justify-content: start;
+			align-items: end;
+			flex-direction: column;
+			row-gap: toRem(35); // геп між списками
+			transition: left 0.3s;
+			.menu-open & {
+			left: 0;
+			}
+		}
+	}
+
+	&__menu-list {
+		display: flex;
+		justify-content: space-between;
+		@include adaptiveValue('gap', 42, 10, 0, $containerWidth, 998);
+		flex-wrap: wrap;
+		align-items: center;
+		@media (max-width: toRem(998)) {
+			display: flex;
+			flex-direction: column;
+			row-gap: toRem(25);
+		}
+	}
+
+	&__menu-item {
+		color: rgb(255, 255, 255);
+		font-size: toRem(12);
+		font-weight: 700;
+		@media (max-width: toRem(998)){
+			font-size: toRem(20);
+		}
+	}
+
+	&__link-menu {
+		@media(any-hover:hover){
+		&:hover{
+			text-decoration: underline;
+		}}
+	}
+
+	&__actions {
+		display: flex;
+		justify-content: space-between;
+		gap: toRem(38);
+		@media (max-width: toRem(998)) {
+			display: flex;
+			flex-direction: column;
+			
+		}
+	}
+
+	&__button {
+		padding: toRem(17) toRem(38) toRem(16) toRem(34);
+		box-sizing: border-box;
+		border: 2px solid rgb(255, 255, 255);
+		border-radius: toRem(40);
+		font-size: toRem(12);
+		font-weight: 700;
+		line-height: 15px;
+		color: rgb(255, 255, 255);
+		transition: all 0.3s;
+		@media(any-hover:hover){
+			&:hover{
+			background: rgb(99, 91, 136);
+		}}
+	}
+
+	&__button--purpule {
+		color: rgb(255, 255, 255);
+		background: linear-gradient(90.00deg, rgb(129, 118, 175),rgb(192, 183, 232) 100%);
+		color: rgb(52, 48, 69);
+		@media(any-hover:hover){
+			&:hover{
+			background: linear-gradient(90.00deg, rgb(77, 68, 116),rgb(163, 155, 197) 100%);
+			color: #fff;
+		}
+	}}
+}
+//========================================================================================================================================================
+.icon-menu {
+	display: none;
+ }
+ @media (max-width: toRem(998)) {
+	.icon-menu {
+	  display: block;
+	  position: relative;
+	  width: 1.875rem;
+	  height: 1.125rem;
+	  z-index: 5;
+	}
+ }
+ @media (max-width: toRem(998)) and (any-hover: none) {
+	.icon-menu {
+	  cursor: default;
+	}
+ }
+ @media (max-width: toRem(998)) {
+	.icon-menu span, .icon-menu::before, .icon-menu::after {
+	  content: "";
+	  -webkit-transition: all 0.3s ease 0s;
+	  transition: all 0.3s ease 0s;
+	  right: 0;
+	  position: absolute;
+	  width: 100%;
+	  height: 0.125rem;
+	  background-color: #fff;
+	}
+	.icon-menu::before {
+	  top: 0;
+	}
+	.icon-menu::after {
+	  bottom: 0;
+	}
+	.icon-menu span {
+	  top: calc(50% - 0.0625rem);
+	  width: 50%;
+	}
+	.menu-open .icon-menu span {
+	  width: 0;
+	}
+	.menu-open .icon-menu::before {
+	  top: calc(50% - 0.0625rem);
+	  -webkit-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+				 transform: rotate(-45deg);
+	}
+	.menu-open .icon-menu::after {
+	  bottom: calc(50% - 0.0625rem);
+	  -webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+				 transform: rotate(45deg);
+	}
+ }
+
+ .page {
+
+	&__hero {
+	}
+}
+.hero {
+
+	&__container {
+		max-width: toRem(1302);
+		margin: 0 auto;
+		padding-left: toRem(15);
+		padding-right: toRem(15);
+		display: flex;
+		justify-content: space-between;
+		gap: toRem(10);
+	}
+
+	&__left {
+		display: flex;
+		padding-top: toRem(34);
+	}
+
+	&__content-left {
+		max-width: toRem(456);
+	}
+
+	&__title {
+		font-size: toRem(40);
+		font-weight: 700;
+		color: #fff; 
+		margin-bottom: toRem(3);
+		span{
+		color:
+rgb(129, 118, 175)
+		}
+	}
+
+	&__sub{
+		font-size: toRem(46);
+font-weight: 700;
+color: rgb(255, 255, 255);
+margin-bottom: toRem(35);
+span{
+	color: rgb(192, 183, 232)
+}
+	}
+
+	&__text {
+		color: rgb(255, 255, 255);
+font-size: toRem(16);
+line-height: 20px;
+@include adaptiveValue('margin-bottom', 67, 36);
+	}
+
+	&__actions {
+		display: flex;
+		gap: toRem(40);
+		align-items: center;
+	}
+
+	&__link {
+		transition: all 0.3s;
+		width: toRem(43);
+		height: toRem(33);
+		@media (any-hover:hover) {
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	&__right {
+		display: flex;
+		position: relative;
+	}
+
+	&__img{
+		width: 100%;
+		height: 100%;
+		aspect-ratio: 490 / 426;
+		offset: cover;
+		position: absolute;
+		z-index: 2;
+
+	}
+
+	&__bg{
+		position: absolute;
+		z-index: 1;
+
+	}
+}
+.button {
+	padding: toRem(16) toRem(43) toRem(17) toRem(38);
+	color: rgb(52, 48, 69);
+font-size: toRem(12);
+transition: all 0.3s;
+font-weight: 700;
+line-height: 15px;
+border-radius: 40px;
+background: linear-gradient(90.00deg, rgb(129, 118, 175),rgb(192, 183, 232) 100%);
+@media (any-hover:hover) {
+	&:hover {
+		background: linear-gradient(90.00deg, rgb(77, 68, 116),rgb(163, 155, 197) 100%);
+		color: #fff;
+	}
+}
+}

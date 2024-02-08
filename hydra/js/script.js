@@ -35,10 +35,12 @@ let _slideToggle = (target, duration = 500) => {
 };
 
 
-const choiseSlider = document.querySelector('.swiper')
+
+
+const choiseSlider = document.querySelector('.info')
 
 if(choiseSlider){
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.info', {
 	// Optional parameters
 	loop: true,
 	slidesPerView: 3,
@@ -46,6 +48,9 @@ const swiper = new Swiper('.swiper', {
 	centeredSlides: true,
 	autoHeight: true,
 	// If we need pagination
+	pagination: {
+	el: '.swiper-pagination',
+	},
 
 
 	// Navigation arrows
@@ -54,6 +59,14 @@ const swiper = new Swiper('.swiper', {
 	prevEl: '.info__arrow--prev',
 	},
 
+
+
+	// And if we need scrollbar
+	scrollbar: {
+	el: '.swiper-scrollbar',
+	},
 });
 }
+
+
 

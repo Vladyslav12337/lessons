@@ -376,27 +376,55 @@ background: linear-gradient(90.00deg, rgb(129, 118, 175),rgb(192, 183, 232) 100%
 }
 
 
-.page {
+.contacts {
 
 	&__info {
 	}
-
-	&__contacts {
-	}
+}
+.info {
+	max-width: toRem(1302);
+	margin: 0 auto;
+	padding-left: toRem(15);
+	padding-right: toRem(15);
+	
 
 	&__swiper {
+		border-radius: 90px;
+box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
+background: radial-gradient(2901.00% 50.16% at 50% 54%,rgba(58, 52, 86, 0.95),rgb(33, 30, 46) 100%);
+
 	}
 
 	&__slide {
+		display: flex !important;
+		align-items: center !important;
+		gap: torem(15) !important;
+		align-self: center !important;
+		padding:toRem(53) toRem(53) toRem(53) toRem(53);
+		
+		&--border{
+			border-right: 1px solid rgba(192, 183, 232, 0.33);
+		}
 	}
 
-	&__info-slide {
+
+
+	&__content-slide {
 	}
 
 	&__link {
 	}
 
 	&__title {
+		color: rgb(255, 255, 255);
+		font-size: toRem(24);
+		margin-bottom: toRem(10);
+	}
+
+	&__sub{
+		color: rgb(255, 255, 255);
+		font-size: toRem(14);
+		line-height: toRem(17);
 	}
 
 	&__arrow {
@@ -408,11 +436,6 @@ background: linear-gradient(90.00deg, rgb(129, 118, 175),rgb(192, 183, 232) 100%
 	&__arrow--next {
 	}
 }
-.contacts {
-}
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
+
+
+

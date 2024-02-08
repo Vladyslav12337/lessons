@@ -224,9 +224,11 @@ $containerWidth: $maxWidthContainer + $containerPadding;
  .page {
 
 	&__hero {
+		margin-bottom: toRem(88);
 	}
 }
 .hero {
+	
 
 	&__container {
 		max-width: toRem(1302);
@@ -389,9 +391,10 @@ background: linear-gradient(90.00deg, rgb(129, 118, 175),rgb(192, 183, 232) 100%
 	
 
 	&__swiper {
+
 		border-radius: 90px;
-box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
-background: radial-gradient(2901.00% 50.16% at 50% 54%,rgba(58, 52, 86, 0.95),rgb(33, 30, 46) 100%);
+		box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
+		background: radial-gradient(2901.00% 50.16% at 50% 54%,rgba(58, 52, 86, 0.95),rgb(33, 30, 46) 100%);
 
 	}
 
@@ -436,6 +439,8 @@ background: radial-gradient(2901.00% 50.16% at 50% 54%,rgba(58, 52, 86, 0.95),rg
 	&__arrow--next {
 	}
 }
+
+
 
 
 

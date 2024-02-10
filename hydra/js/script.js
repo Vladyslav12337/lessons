@@ -37,37 +37,36 @@ let _slideToggle = (target, duration = 500) => {
 
 
 
-const choiseSlider = document.querySelector('.info')
+const choiseSlider = document.querySelector('.info');
 
-if(choiseSlider){
-const swiper = new Swiper('.info', {
-	// Optional parameters
-	loop: true,
-	slidesPerView: 3,
-	spaceBetween: 30,
-	centeredSlides: true,
-	autoHeight: true,
-	// If we need pagination
-	pagination: {
-	el: '.swiper-pagination',
-	},
+if (choiseSlider) {
+  const swiper = new Swiper('.info', {
+    // Optional parameters
+    loop: true,
+    autoHeight: true,
+    slidesPerView: 1,
 
+    // Breakpoints
+    breakpoints: {
+      // При ширине экрана больше 580px
+      580: {
+        slidesPerView: 2,
+      },
+      // При ширине экрана меньше 580px
+    },
 
-	// Navigation arrows
-	navigation: {
-	nextEl: '.info__arrow--next',
-	prevEl: '.info__arrow--prev',
-	},
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
 
-
-
-	// And if we need scrollbar
-	scrollbar: {
-	el: '.swiper-scrollbar',
-	},
-});
+    // Navigation arrows
+    navigation: {
+      nextEl: '.info__arrow--next',
+      prevEl: '.info__arrow--prev',
+    },
+  });
 }
-
 
 
 

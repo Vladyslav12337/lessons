@@ -3,6 +3,33 @@
 @import "_fonts.scss";
 @import "_reset.scss";
 @import "menu.scss";
+%title{
+	color: rgb(255, 255, 255);
+font-family: "Montserrat";
+font-size: 36px;
+font-weight: 700;
+line-height: 44px;
+letter-spacing: 0%;
+}
+
+%sub{
+	color: rgba(255, 255, 255, 0.95);
+font-family: "Montserrat";
+font-size: 36px;
+font-weight: 300;
+line-height: 44px;
+letter-spacing: 0%;
+text-align: left;
+}
+%text{
+	color: rgb(255, 255, 255);
+font-family: "Montserrat";
+font-size: 16px;
+font-weight: 400;
+line-height: 25.4px;
+letter-spacing: 0%;
+text-align: left;
+}
 
 
 // Мінімальна ширина сторінки
@@ -364,7 +391,7 @@ font-size: toRem(12);
 transition: all 0.3s;
 font-weight: 700;
 line-height: 15px;
-border-radius: 40px;
+border-radius: tiRem(40);
 background: linear-gradient(90.00deg, rgb(129, 118, 175),rgb(192, 183, 232) 100%);
 @media (any-hover:hover) {
 	&:hover {
@@ -380,6 +407,15 @@ background: linear-gradient(90.00deg, rgb(129, 118, 175),rgb(192, 183, 232) 100%
 
 .contacts {
 
+	&--margin{
+		margin-bottom: toRem(90);
+	}
+	@media(max-width:880px){
+		display: block;
+		
+	}
+	display: none;
+
 	&__info {
 	}
 }
@@ -391,54 +427,309 @@ background: linear-gradient(90.00deg, rgb(129, 118, 175),rgb(192, 183, 232) 100%
 	
 
 	&__swiper {
+		position: relative;
+		
 
-		border-radius: 90px;
-		box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
-		background: radial-gradient(2901.00% 50.16% at 50% 54%,rgba(58, 52, 86, 0.95),rgb(33, 30, 46) 100%);
 
 	}
 
 	&__slide {
+		
+		border-radius: toRem(90);
+		box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
+		background: radial-gradient(2901.00% 50.16% at 50% 54%,rgba(58, 52, 86, 0.95),rgb(33, 30, 46) 100%);
 		display: flex !important;
 		align-items: center !important;
 		gap: torem(15) !important;
 		align-self: center !important;
-		padding:toRem(53) toRem(53) toRem(53) toRem(53);
-		
+		@include adaptiveValue('padding', 50, 20, 0, 1440, 900 ) ;
+		@media (max-width:toRem(580)){
+			justify-content: center ;
+		}
 		&--border{
 			border-right: 1px solid rgba(192, 183, 232, 0.33);
+			
 		}
 	}
 
 
 
 	&__content-slide {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+		align-self: center;
+		justify-content: center;
+		flex-grow: 1;
+		
+
+		
 	}
 
 	&__link {
+display: block;
+min-height: 300px;
 	}
+
+	&__title {
+		
+		color: rgb(255, 255, 255);
+		font-size: toRem(24);
+		margin-bottom: toRem(10);
+		@media (max-width:toRem(880)){
+			display: none;
+		}
+	}
+
+	&__sub{
+
+		color: rgb(255, 255, 255);
+		font-size: toRem(14);
+		line-height: toRem(17);
+		
+		
+	}
+
+	&__arrow {
+
+	}
+
+	&__arrow--prev {
+		position: absolute;
+		z-index: 1;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		
+	}
+
+	&__arrow--next {
+		position: absolute;
+		z-index: 1;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+
+	}
+
+
+}
+
+.contacts-statick {
+	&--margin{
+		margin-bottom: toRem(90);
+	}
+position: relative;
+z-index: 2;
+@media(max-width:880px){
+	display: none;
+}
+
+	&__container {
+		max-width: toRem(1302);
+		margin: 0 auto;
+		padding: toRem(53) toRem(15) toRem(54) toRem(15);
+		
+		display: flex;
+		justify-content: space-around;
+		gap: toRerm(80);
+		border-radius: 90px;
+		box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
+		background: radial-gradient(2901.00% 50.16% at 50% 54%,rgba(58, 52, 86, 0.95),rgb(33, 30, 46) 100%);
+	}
+
+	&__card {
+display: flex;
+align-items: center;
+align-self: center;
+gap: toRem(15);
+
+@include adaptiveValue('padding-right',42,10,0,1440,998);
+@include adaptiveValue('padding-left',42,10,0,1440,998);
+&:not(:last-child){
+	border-right: 1px solid rgba(192, 183, 232, 0.33);
+}
+	}
+
+	&__info {
+	}
+
+	&__link {
+		color: rgb(255, 255, 255);
+		font-size: toRem(14);
+		line-height: toRem(17);
+	}
+}
+.info {
 
 	&__title {
 		color: rgb(255, 255, 255);
 		font-size: toRem(24);
 		margin-bottom: toRem(10);
 	}
+}
 
-	&__sub{
-		color: rgb(255, 255, 255);
-		font-size: toRem(14);
-		line-height: toRem(17);
+//=========================================
+.info {
+
+	&__container {
+		@media (max-width:toRem(984)) {
+			
+			justify-content: center;
+		}
+		max-width: toRem(1302);
+		margin: 0 auto;
+		padding-left: toRem(15);
+		padding-right: toRem(15);
+		display: flex;
+		justify-content: space-between;
+		gap: toRem(10);
+		align-self: flex-start;
+		align-items: start;
+		@include adaptiveValue('gap', 111,20,0 ,1440,998);
 	}
 
-	&__arrow {
+	&__question {
+min-width: toRem(510);
+@media (max-width:toRem(984)) {
+	display: none;
+}
 	}
 
-	&__arrow--prev {
+	&__title {
+color: #fff;
+font-size: toRem(36);
+font-weight: 700;
+line-height: 44px;
+text-align: left;
+margin-bottom: toRem(10);
 	}
 
-	&__arrow--next {
+	&__button {
+		display: flex;
+		justify-content: space-between;
+		gap: toRem(10);
+		align-self: center;
+		align-items: center;
+	}
+
+	&__sub {
+		color: #fff;
+		font-size: toRem(36);
+		font-weight: 300;
+		
+		text-align: left;
+		flex: 1 0 toRem(251);
+	}
+
+	&__link {
+		img{
+			width: 100%;
+			height: 100%;
+			aspect-ratio: 228/33;
+			object-fit: cover;
+		}
+		transition: all 0.3s;
+		@media (any-hover:hover) {
+			&:hover{
+				transform: scale(1.1);
+			}
+			
+		}
+	}
+
+	&__answer {
+		@media (max-width:toRem(984)) {
+			display: none;
+		}
+		p {
+color: #fff;
+font-size: toRem(16);
+line-height: 20px;
+text-align: left;
+		}
+	}
+
+	&__title-adapt{
+		display: flex;
+		justify-content: center;
+		display: none;
+		text-align: center;
+		@media (max-width:toRem(984)) {
+			display: block;
+		}
+		span{
+			@extend %sub;
+		}
+		@extend %title;
+		
 	}
 }
+.info-margin {
+	@include adaptiveValue('margin-bottom', 69, 20,0,1440,998);
+}
+
+
+
+//======================================================
+
+.about {
+
+	&__container {
+		max-width: toRem(1302);
+		margin: 0 auto;
+		padding-left: toRem(15);
+		padding-right: toRem(15);
+		display: flex;
+		justify-content: space-between;
+		@include adaptiveValue('gap', 118,25,0 , 1440, 600);
+		background: url('../img/boy-vr-bg.svg') center / cover;
+	}
+
+	&__img {
+		padding-top: toRem(5);
+		aspect-ratio: 524/ 557;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__boy-img {
+		border-radius: 100px 100px 100px 240px;
+
+	}
+
+	&__info {
+		align-items: center;
+		align-self: center;
+	}
+
+	&__title {
+@extend %title;
+margin-bottom: toRem(5);
+	}
+
+	&__sub-title {
+		@extend %sub;
+		@include adaptiveValue('margin-bottom', 42,15,0,1440,320);
+	}
+
+	&__text {
+
+@extend %text;
+margin-bottom: toRem(28);
+	}
+
+	
+}
+.about--margin {
+}
+.button {
+	display: inline-block;
+	border-radius: toRem(40);
+}
+
 
 
 

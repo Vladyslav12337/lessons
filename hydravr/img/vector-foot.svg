@@ -1,0 +1,21 @@
+<svg width="1442.075195" height="548.036621" viewBox="0 0 1442.08 548.037" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<linearGradient id="paint_linear_13_65_0" x1="1439.944580" y1="281.112305" x2="2.944580" y2="281.112305" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#343045"/>
+			<stop offset="0.348958" stop-color="#C0B7E8"/>
+			<stop offset="0.687500" stop-color="#8176AF"/>
+			<stop offset="1.000000" stop-color="#343045"/>
+		</linearGradient>
+		<linearGradient id="paint_linear_13_66_0" x1="1439.944580" y1="4.112305" x2="4.944580" y2="4.112305" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#343045"/>
+			<stop offset="0.348958" stop-color="#C0B7E8"/>
+			<stop offset="0.687500" stop-color="#8176AF"/>
+			<stop offset="1.000000" stop-color="#343045"/>
+		</linearGradient>
+	</defs>
+	<path id="Vector 18" d="M1439.94 281.112C1315.61 292.446 1085.15 387.87 957.445 493.112C795.445 626.612 543.611 472.112 391.445 375.112C283.945 308.112 55.7446 241.812 2.94464 512.612" stroke="url(#paint_linear_13_65_0)" stroke-opacity="0.130000" stroke-width="6.000000"/>
+	<path id="Vector 19" d="M4.94464 365.112C46.778 296.612 215.345 190.312 554.945 313.112C894.545 435.913 1286.44 156.946 1439.94 2.1123" stroke="url(#paint_linear_13_66_0)" stroke-opacity="0.130000" stroke-width="6.000000"/>
+</svg>
